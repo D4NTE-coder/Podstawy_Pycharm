@@ -11,7 +11,7 @@ while True:
 
 imien = input("Podaj swoje imie: ")
 
-wiek = datetime.now().year - int(rok)
+wiek = datetime.now().year - rok
 
 separator=("-"*100)
 
