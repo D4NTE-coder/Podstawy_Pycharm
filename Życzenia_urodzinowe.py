@@ -7,7 +7,7 @@ while True:
         rok=int(rok)
         break
     except ValueError:
-        print("Bład! Rok urodzenia musi być liczbą całkowitą!")
+        print("Błąd! Rok urodzenia musi być liczbą całkowitą!")
 
 imien = input("Podaj swoje imie: ")
 
@@ -21,4 +21,4 @@ Niech Twoje marzenia, nawet te najskrytsze, stają się rzeczywistością.
 Niech każdy krok na Twojej drodze będzie pełen sukcesów, a otaczający Cię ludzie niech zawsze wspierają Cię w Twoich dążeniach. 
 Dużo zdrowia, uśmiechu i niekończącej się energii do podejmowania nowych wyzwań!\n\nWszystkiego najlepszego!"""
 
-print(f"{separator}\n\n{imieo} Wszystkiego najlepszego z okazji {wiek} urodzin!\n\n {szablon_urodzinowy}\n\n{imien}")
+print(f"\n{separator}\n\n{imieo}, wszystkiego najlepszego z okazji {wiek} urodzin!\n\n {szablon_urodzinowy}\n\nZ najlepszymi życzeniami {imien} \n\n{separator}")

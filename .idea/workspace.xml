@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="usuniecie wywolania podwójnego int(rok)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Zmiana nazwy pliku z main na Zyczenia_urodzinowe">
+      <change beforePath="$PROJECT_DIR$/Życzenia_urodzinowe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Życzenia_urodzinowe.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,12 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1728051030061</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Zmiana nazwy pliku z main na Zyczenia_urodzinowe">
+      <option name="closed" value="true" />
+      <created>1728052219594</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728052219594</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Stworzenie programu" />
     <MESSAGE value="usuniecie wywolania podwójnego int(rok)" />
-    <option name="LAST_COMMIT_MESSAGE" value="usuniecie wywolania podwójnego int(rok)" />
+    <MESSAGE value="Zmiana nazwy pliku z main na Zyczenia_urodzinowe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zmiana nazwy pliku z main na Zyczenia_urodzinowe" />
   </component>
 </project>
