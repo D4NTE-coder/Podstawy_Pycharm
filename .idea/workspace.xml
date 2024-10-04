@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Stworzenie programu">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="usuniecie wywolania podwójnego int(rok)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +46,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.main.executor": "Run",
+    "Python.Życzenia_urodzinowe.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true"
@@ -84,11 +84,36 @@
       <option name="project" value="LOCAL" />
       <updated>1728050148392</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="usuniecie wywolania podwójnego int(rok)">
+      <option name="closed" value="true" />
+      <created>1728050920017</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728050920017</updated>
+    </task>
+    <task id="LOCAL-00004" summary="usuniecie wywolania podwójnego int(rok)">
+      <option name="closed" value="true" />
+      <created>1728050931433</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728050931433</updated>
+    </task>
+    <task id="LOCAL-00005" summary="usuniecie wywolania podwójnego int(rok)">
+      <option name="closed" value="true" />
+      <created>1728051030061</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728051030061</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Stworzenie programu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stworzenie programu" />
+    <MESSAGE value="usuniecie wywolania podwójnego int(rok)" />
+    <option name="LAST_COMMIT_MESSAGE" value="usuniecie wywolania podwójnego int(rok)" />
   </component>
 </project>
