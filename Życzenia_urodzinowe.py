@@ -1,6 +1,6 @@
 from datetime import datetime
 
-imieo = input("Podaj imie solenizanta: ")
+imieo = input("Podaj imię solenizanta: ")
 while True:
     rok=input("Podaj rok urodzenia solenizanta: ")
     try:
@@ -9,7 +9,7 @@ while True:
     except ValueError:
         print("Błąd! Rok urodzenia musi być liczbą całkowitą!")
 
-imien = input("Podaj swoje imie: ")
+imien = input("Podaj swoje imię: ")
 
 wiek = datetime.now().year - rok
 
