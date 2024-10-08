@@ -20,11 +20,11 @@ obecna_paczka = 1
 
 for element in range(liczba_elementow):
     while True:
-        waga_elementu = input("Podaj wage elementu {element +1) kg: ")
+        waga_elementu = input(f"Podaj wage elementu {element +1} (kg): ")
         try:
             waga_elementu = float(waga_elementu)
             #dodanie przedzialu od 1 do 10 kg dopusczonej paczki
-            if waga_elementu <0 or waga_elementu > 10:
+            if waga_elementu < 0.1 or waga_elementu > 10:
                 print("Waga elementu nie znajduje sie w przedziale 0.1 do 10 kg.")
                 break
             # sprawdzenie czy przeslyka zmieni sie w paczce
