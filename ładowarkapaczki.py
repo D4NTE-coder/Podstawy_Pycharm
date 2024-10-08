@@ -42,3 +42,12 @@ for element in range(liczba_elementow):
             break
         except ValueError:
             print("Waga elementu elementu musi być liczbą!")
+
+
+# wyświetlanie danych
+separator=("-"*100)
+if paczki:
+    liczba_paczek = len(paczki)
+
+print(f"\n{separator}\n")
+print(f"""Liczba paczek wysłanych {liczba_paczek}\n""")
