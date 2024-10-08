@@ -29,14 +29,14 @@ for element in range(liczba_elementow):
                 break
             # sprawdzenie czy przeslyka zmieni sie w paczce
             if aktualna_waga_paczki + waga_elementu <= 20:
-                aktualna_waga_paczki =+ waga_elementu
+                aktualna_waga_paczki += waga_elementu
                 print(f"Element o wadze {waga_elementu} został dodany do {obecna_paczka}")
 
             #jezeli przedmiot nie miesci sie w obecnej paczce zapisujemy go i dodajemy do nowej paczki
             else:
                 paczki.append(aktualna_waga_paczki)
                 print(f"Obecna paczka osiagnela {obecna_paczka} limit i została wysłana z wagą {aktualna_waga_paczki}kg")
-                obecna_paczka =+ 1
+                obecna_paczka += 1
                 aktualna_waga_paczki = waga_elementu
                 print(f"Tworzenie nowej paczki {obecna_paczka}")
             break
