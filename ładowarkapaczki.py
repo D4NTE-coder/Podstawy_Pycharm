@@ -23,7 +23,7 @@ for element in range(liczba_elementow):
         waga_elementu = input(f"Podaj wage elementu {element +1} (kg): ")
         try:
             waga_elementu = float(waga_elementu)
-            #dodanie przedzialu od 1 do 10 kg dopusczonej paczki
+            #dodanie przedziału od 0.1 do 10 kg dopuszczonej paczki
             if waga_elementu < 0.1 or waga_elementu > 10:
                 print("Waga elementu nie znajduje sie w przedziale 0.1 do 10 kg.")
                 break
@@ -48,6 +48,10 @@ for element in range(liczba_elementow):
 separator=("-"*100)
 if paczki:
     liczba_paczek = len(paczki)
+    suma_wag_paczek = sum(paczki)
+    suma_pustych_kilo = liczba_paczek * 20 - suma_wag_paczek
 
 print(f"\n{separator}\n")
-print(f"""Liczba paczek wysłanych {liczba_paczek}\n""")
+print(f"""Liczba paczek wysłanych {liczba_paczek}\n
+Suma wysłanych kilogramów {suma_wag_paczek:.4f} kg\n
+Suma wysłanych pustych kilogramów {suma_pustych_kilo:.4f} kg\n""")
