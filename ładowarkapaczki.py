@@ -60,9 +60,9 @@ if paczki:
     paczka_z_pustymi = max(paczki,key=lambda x: 20 - x[1] )
     najwiecej_pustych_kilo = 20 - paczka_z_pustymi[1]
 
-print(f"\n{separator}\n")
+print(f"\n{Fore.BLACK}{separator}\n")
 print(f"""Liczba paczek wysłanych {Fore.YELLOW}{liczba_paczek}{Style.RESET_ALL}\n
 Suma wysłanych kilogramów {Fore.YELLOW}{suma_wag_paczek:.4f} kg{Style.RESET_ALL}\n
 Suma wysłanych pustych kilogramów {Fore.YELLOW}{suma_pustych_kilo:.4f} kg{Style.RESET_ALL}\n
 Paczka zawaierająca najwiecej pustych kilogramów to paczka: {Fore.YELLOW}{paczka_z_pustymi[0]}{Style.RESET_ALL} i zawierała ona {Fore.YELLOW}{najwiecej_pustych_kilo:.2f} kg{Style.RESET_ALL} pustych kilogramów\n
-{separator}""")
+{Fore.BLACK}{separator}""")
