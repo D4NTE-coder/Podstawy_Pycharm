@@ -54,6 +54,12 @@ if aktualna_waga_paczki > 0:
 
 ## wyświetlanie danych
 separator=("-"*100)
+liczba_paczek = []
+suma_wag_paczek = []
+suma_pustych_kilo = []
+paczka_z_pustymi = []
+najwiecej_pustych_kilo= []
+
 if paczki:
     liczba_paczek = len(paczki)
     suma_wag_paczek = sum(waga for _, waga in paczki)
