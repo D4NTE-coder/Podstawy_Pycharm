@@ -27,7 +27,7 @@ for element in range(liczba_elementow):
         try:
             waga_elementu = float(waga_elementu)
             ## dodanie przedziału od 0.1 do 10 kg dopuszczonej paczki
-            if waga_elementu < 0.1 or waga_elementu > 10:
+            if waga_elementu < 1 or waga_elementu > 10:
                 print("Waga elementu nie znajduje sie w przedziale 0.1 do 10 kg.")
                 break
             ## sprawdzenie czy przeslyka zmieni sie w paczce
