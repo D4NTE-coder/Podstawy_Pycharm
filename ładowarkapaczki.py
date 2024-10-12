@@ -26,7 +26,7 @@ for element in range(liczba_elementow):
         waga_elementu = input(f"Podaj wage elementu {element +1} (kg): ")
         try:
             waga_elementu = float(waga_elementu)
-            ## dodanie przedziału od 0.1 do 10 kg dopuszczonej paczki
+            ## dodanie przedziału od 1 do 10 kg dopuszczonej paczki
             if waga_elementu < 1 or waga_elementu > 10:
                 print("Waga elementu nie znajduje sie w przedziale 1 do 10 kg.")
                 break
@@ -45,6 +45,11 @@ for element in range(liczba_elementow):
             break
         except ValueError:
             print("Waga elementu elementu musi być liczbą!")
+
+
+    if waga_elementu < 1 or waga_elementu > 10:
+        break
+
 
 ## wyslanie ostatniej paczki
 if aktualna_waga_paczki > 0:
@@ -67,9 +72,11 @@ if paczki:
     paczka_z_pustymi = max(paczki,key=lambda x: 20 - x[1] )
     najwiecej_pustych_kilo = 20 - paczka_z_pustymi[1]
 
-print(f"\n{Fore.BLACK}{separator}\n")
-print(f"""Liczba paczek wysłanych {Fore.YELLOW}{liczba_paczek}{Style.RESET_ALL}\n
-Suma wysłanych kilogramów {Fore.YELLOW}{suma_wag_paczek:.4f} kg{Style.RESET_ALL}\n
-Suma wysłanych pustych kilogramów {Fore.YELLOW}{suma_pustych_kilo:.4f} kg{Style.RESET_ALL}\n
-Paczka zawaierająca najwiecej pustych kilogramów to paczka: {Fore.YELLOW}{paczka_z_pustymi[0]}{Style.RESET_ALL} i zawierała ona {Fore.YELLOW}{najwiecej_pustych_kilo:.2f} kg{Style.RESET_ALL} pustych kilogramów\n
-{Fore.BLACK}{separator}""")
+    print(f"\n{Fore.BLACK}{separator}\n")
+    print(f"""Liczba paczek wysłanych {Fore.YELLOW}{liczba_paczek}{Style.RESET_ALL}\n
+    Suma wysłanych kilogramów {Fore.YELLOW}{suma_wag_paczek:.4f} kg{Style.RESET_ALL}\n
+    Suma wysłanych pustych kilogramów {Fore.YELLOW}{suma_pustych_kilo:.4f} kg{Style.RESET_ALL}\n
+    Paczka zawaierająca najwiecej pustych kilogramów to paczka: {Fore.YELLOW}{paczka_z_pustymi[0]}{Style.RESET_ALL} i zawierała ona {Fore.YELLOW}{najwiecej_pustych_kilo:.2f} kg{Style.RESET_ALL} pustych kilogramów\n
+    {Fore.BLACK}{separator}""")
+else:
+    print(f"\n{Fore.RED}Brak wysłanych paczek — operacja zakończona przed wysyłką.{Style.RESET_ALL}")
