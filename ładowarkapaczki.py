@@ -44,9 +44,9 @@ for element in range(liczba_elementow):
         except ValueError:
             print("Waga elementu elementu musi być liczbą!")
 
-            if aktualna_waga_paczki > 0:
-                paczki.append((obecna_paczka, aktualna_waga_paczki))
-                print(f"Paczka {obecna_paczka} zostala wysłana z wagą {aktualna_waga_paczki}")
+if aktualna_waga_paczki > 0:
+    paczki.append((obecna_paczka, aktualna_waga_paczki))
+    print(f"Paczka {obecna_paczka} zostala wysłana z wagą {aktualna_waga_paczki}")
 
 
 ## wyświetlanie danych
