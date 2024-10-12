@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="poprawienie warunków (sprawdzenia czy element miesci sie w paczce oraz rozpoczynania nowej paczki">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Wyswietlanie danych(Suma wag oraz suma pustych kilogramow, zaokraglenie 4 miejsca po przecinku)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ładowarkapaczki.py" beforeDir="false" afterPath="$PROJECT_DIR$/ładowarkapaczki.py" afterDir="false" />
     </list>
@@ -46,6 +46,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.gra.executor": "Run",
     "Python.main.executor": "Run",
     "Python.proba.executor": "Run",
     "Python.ładowarkapaczki.executor": "Run",
@@ -175,7 +176,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728409415123</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Wyswietlanie danych poczatkowe (sprawdzenie)">
+      <option name="closed" value="true" />
+      <created>1728410223060</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1728410223061</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Wyswietlanie danych(Suma wag oraz suma pustych kilogramow, zaokraglenie 4 miejsca po przecinku)">
+      <option name="closed" value="true" />
+      <created>1728411208713</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1728411208713</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -188,6 +205,8 @@
     <MESSAGE value="Dodanie Warunkow dotyczących paczki" />
     <MESSAGE value="poprawienie warunków ( przedział paczki)" />
     <MESSAGE value="poprawienie warunków (sprawdzenia czy element miesci sie w paczce oraz rozpoczynania nowej paczki" />
-    <option name="LAST_COMMIT_MESSAGE" value="poprawienie warunków (sprawdzenia czy element miesci sie w paczce oraz rozpoczynania nowej paczki" />
+    <MESSAGE value="Wyswietlanie danych poczatkowe (sprawdzenie)" />
+    <MESSAGE value="Wyswietlanie danych(Suma wag oraz suma pustych kilogramow, zaokraglenie 4 miejsca po przecinku)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wyswietlanie danych(Suma wag oraz suma pustych kilogramow, zaokraglenie 4 miejsca po przecinku)" />
   </component>
 </project>
