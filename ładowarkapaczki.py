@@ -1,4 +1,6 @@
-from wsgiref.simple_server import server_version
+from colorama import Fore, Style, init
+
+init(autoreset=True)
 
 ## Pobieranie liczby elementow do wysyłki
 while True:
@@ -31,22 +33,22 @@ for element in range(liczba_elementow):
             ## sprawdzenie czy przeslyka zmieni sie w paczce
             if aktualna_waga_paczki + waga_elementu <= 20:
                 aktualna_waga_paczki += waga_elementu
-                print(f"Element o wadze {waga_elementu} został dodany do {obecna_paczka}")
+                print(f"Element o wadze {Fore.YELLOW}{waga_elementu}{Style.RESET_ALL} został dodany do {Fore.YELLOW}{obecna_paczka}")
 
             ## jezeli przedmiot nie miesci sie w obecnej paczce zapisujemy go i dodajemy do nowej paczki
             else:
                 paczki.append((obecna_paczka, aktualna_waga_paczki))
-                print(f"Obecna paczka osiagnela {obecna_paczka} limit i została wysłana z wagą {aktualna_waga_paczki}kg")
+                print(f"Obecna paczka osiagnela {Fore.YELLOW}{obecna_paczka}{Style.RESET_ALL} limit i została wysłana z wagą {Fore.YELLOW}{aktualna_waga_paczki}kg")
                 obecna_paczka += 1
                 aktualna_waga_paczki = waga_elementu
-                print(f"Tworzenie nowej paczki {obecna_paczka}")
+                print(f"Tworzenie nowej paczki {Fore.YELLOW}{obecna_paczka}")
             break
         except ValueError:
             print("Waga elementu elementu musi być liczbą!")
 
 if aktualna_waga_paczki > 0:
     paczki.append((obecna_paczka, aktualna_waga_paczki))
-    print(f"Paczka {obecna_paczka} zostala wysłana z wagą {aktualna_waga_paczki}")
+    print(f"Paczka {Fore.YELLOW}{obecna_paczka}{Style.RESET_ALL} zostala wysłana z wagą {Fore.YELLOW}{aktualna_waga_paczki}")
 
 
 ## wyświetlanie danych
@@ -59,8 +61,8 @@ if paczki:
     najwiecej_pustych_kilo = 20 - paczka_z_pustymi[1]
 
 print(f"\n{separator}\n")
-print(f"""Liczba paczek wysłanych {liczba_paczek}\n
-Suma wysłanych kilogramów {suma_wag_paczek:.4f} kg\n
-Suma wysłanych pustych kilogramów {suma_pustych_kilo:.4f} kg\n
-Paczka zawaierająca najwiecej pustych kilogramów to paczka:{paczka_z_pustymi[0]} i zawierała ona {najwiecej_pustych_kilo:.2f}kg pustych kilogramów\n
+print(f"""Liczba paczek wysłanych {Fore.YELLOW}{liczba_paczek}{Style.RESET_ALL}\n
+Suma wysłanych kilogramów {Fore.YELLOW}{suma_wag_paczek:.4f} kg{Style.RESET_ALL}\n
+Suma wysłanych pustych kilogramów {Fore.YELLOW}{suma_pustych_kilo:.4f} kg{Style.RESET_ALL}\n
+Paczka zawaierająca najwiecej pustych kilogramów to paczka: {Fore.YELLOW}{paczka_z_pustymi[0]}{Style.RESET_ALL} i zawierała ona {Fore.YELLOW}{najwiecej_pustych_kilo:.2f} kg{Style.RESET_ALL} pustych kilogramów\n
 {separator}""")
