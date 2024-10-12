@@ -46,6 +46,7 @@ for element in range(liczba_elementow):
         except ValueError:
             print("Waga elementu elementu musi być liczbą!")
 
+## wyslanie ostatniej paczki
 if aktualna_waga_paczki > 0:
     paczki.append((obecna_paczka, aktualna_waga_paczki))
     print(f"Paczka {Fore.YELLOW}{obecna_paczka}{Style.RESET_ALL} zostala wysłana z wagą {Fore.YELLOW}{aktualna_waga_paczki}")
