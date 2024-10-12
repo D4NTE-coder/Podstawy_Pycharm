@@ -46,7 +46,7 @@ for element in range(liczba_elementow):
         except ValueError:
             print("Waga elementu elementu musi być liczbą!")
 
-
+     ## paczka powyzej/ponizej przedzialu - bład ! jezeli jest to pierwszy element komunikat jezeli sa paczki juz zapakowane to podsumowanie
     if waga_elementu < 1 or waga_elementu > 10:
         break
 
