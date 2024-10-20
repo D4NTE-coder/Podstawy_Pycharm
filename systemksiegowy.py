@@ -43,11 +43,11 @@ while True:
     if wybor_użytkownika == "1":
         kwota = float(input("Podaj kwotę o jaką chcesz zwiekszyć/zmniejszyć saldo: "))
         if Saldo + kwota <0:
-            print(f"Brak środków na koncie ! {separator}")
-            kontener.append(f"Próba odjecia zbyt dużej kwoty {separator}")
+            print(f"Brak środków na koncie !\n{separator}")
+            kontener.append(f"Próba odjecia zbyt dużej kwoty ")
         else:
             Saldo += kwota
-            kontener.append(f"Zmiana salda o {kwota}\n{separator}")
+            kontener.append(f"Zmiana salda o {kwota} \n{separator}")
 
     elif wybor_użytkownika == "2":
         marka = input("Podaj marke którą chcesz sprzedać: ")
@@ -62,11 +62,11 @@ while True:
                     print(f"Sprzedałeś samochód {Fore.YELLOW}{marka} {model} {rok}{Style.RESET_ALL}\n{separator}")
                     kontener.append(f"Sprzedano samochód {Fore.YELLOW}{marka} {model} {rok}{Style.RESET_ALL}")
                 else:
-                    print(f"Ten model został całkowicie wyprzedany, dostawa w trakcie {separator}")
+                    print(f"{Fore.RED}Ten model został całkowicie wyprzedany, dostawa w trakcie{Style.RESET_ALL} {separator}")
                 znaleziono_samochod = True
                 break
         if not znaleziono_samochod:
-            print(f"Nie znaleziono samochodu\n {separator}")
+            print(f"{Fore.RED}Nie znaleziono samochodu{Style.RESET_ALL}\n {separator}")
 
     elif wybor_użytkownika == "3":
         marka = input("Podaj marke którą chcesz zakupić: ")
@@ -83,10 +83,10 @@ while True:
                 print(f"{Fore.RED} Zakup nie może zostać zrealizowany ilość sztuk i cena muszą być wieksze od 0{Style.RESET_ALL}")
                 continue
         except ValueError:
-            print(f"Podano nie prawidłowe dane {separator}")
+            print(f"{Fore.RED}Podano nie prawidłowe dane{Style.RESET_ALL} {separator}")
             continue
         if ilosc_sztuk * cena_zakup > Saldo:
-            print(f"Nie posiadasz wystarczająch środków zeby kupić pojazd: {separator}")
+            print(f"{Fore.RED}Nie posiadasz wystarczająch środków zeby kupić pojazd:{Style.RESET_ALL} {separator}")
             continue
         autozbior.append({
         "marka": marka,
@@ -135,13 +135,13 @@ while True:
             do = int(do) if do else len(kontener)
 
             if od < 0 or do > len(kontener) or od >= do:
-                print(f"Nieprawidłowy zakres! Liczba dostępnych operacji: {len(kontener)} {separator}")
+                print(f"{Fore.RED}Nieprawidłowy zakres! Liczba dostępnych operacji:{Style.RESET_ALL} {len(kontener)} {separator}")
             else:
                 print(f"Przegląd działan {od} do {do}: ")
                 for i in range(od,do):
                     print(f"{i +1}. {kontener[i]}")
         except ValueError:
-            print("Podano nieprawidłowe wartości indeksów. ")
+            print(f"{Fore.RED}Podano nieprawidłowe wartości indeksów.{Style.RESET_ALL} ")
         kontener.append(f"Sprawdzono historię działań od {od} do {do}")
     if wybor_użytkownika == "8":
         break
