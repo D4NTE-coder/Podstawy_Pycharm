@@ -73,12 +73,15 @@ while True:
         model = input("Podaj model który chcesz zakupić: ")
         rok = int(input("Podaj rok wyprodukowania: "))
         kolor = input("Podaj kolor który chcesz zakupić:")
-        silnik = input("Podaj silnik jaki ma mieć pojazd: ")
+        silnik = input("Podaj silnik jaki ma pojazd: ")
         try:
             przebieg = int(input("Podaj przebieg jaki posiada pojazd: "))
             ilosc_sztuk = int(input("Podaj ilość sztuk która chcesz zakupić: "))
             cena_zakup = float(input("Podaj kwotę za którą zakupiony został pojazd: "))
             cena_sprzedarz = float(input("Podaj kwotę za jaką wystawiasz pojazd: "))
+            if ilosc_sztuk <= 0 or cena_zakup <=0:
+                print(f"{Fore.RED} Zakup nie może zostać zrealizowany ilość sztuk i cena muszą być wieksze od 0{Style.RESET_ALL}")
+                continue
         except ValueError:
             print(f"Podano nie prawidłowe dane {separator}")
             continue
