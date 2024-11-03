@@ -22,7 +22,6 @@
 # Polecenie "nauczyciel" - Należy pobrać imię i nazwisko nauczyciela, program ma wypisać wszystkie klasy, które prowadzi nauczyciel.
 # Polecenie "wychowawca" - Należy pobrać imię i nazwisko nauczyciela, a program ma wypisać wszystkich uczniów, których prowadzi wychowawca.
 # Polecenie "koniec" - Wraca do pierwszego menu.
-from click import style
 from colorama import Fore, Style, init
 
 init(autoreset=True)
@@ -70,7 +69,7 @@ def zarzadzaj_uczniem():
     nazwisko = input("Podaj nazwisko ucznia: ")
     uczen = next((uczen for uczen in uczniowie if uczen.imie == imie and uczen.nazwisko == nazwisko), None)
     if uczen:
-        print(f"Lekcje ucznia {Fore.YELLOW}{uczen.imie} {uczen.nazwisko}{Style.RESET_ALL}: ")
+        print(f"Lekcje ucznia {Fore.YELLOW}{uczen.imie} {uczen.nazwisko}{Style.RESET_ALL} z klasy {Fore.YELLOW}{uczen.klasa}{Style.RESET_ALL}: ")
         for nauczyciel in nauczyciele:
             if uczen.klasa in nauczyciel.klasy:
                 print(f"- {nauczyciel.przedmiot} (prowadzi {nauczyciel.imie} {nauczyciel.nazwisko})")
