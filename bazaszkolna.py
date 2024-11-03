@@ -1,4 +1,4 @@
-# Utwórz program do zarządzania bazą szkolną. Istnieje możliwość tworzenia trzech typów użytkowników (uczeń, nauczyciel, wychowawca) a także zarządzania nimi.
+# ###Utwórz program do zarządzania bazą szkolną. Istnieje możliwość tworzenia trzech typów użytkowników (uczeń, nauczyciel, wychowawca) a także zarządzania nimi.
 #
 # Po uruchomieniu programu można wpisać jedną z następujących komend: utwórz, zarządzaj, koniec.
 #
@@ -21,43 +21,31 @@
 # Polecenie "uczeń" - Należy pobrać imię i nazwisko uczenia, program ma wypisać wszystkie lekcje, które ma uczeń a także nauczycieli, którzy je prowadzą.
 # Polecenie "nauczyciel" - Należy pobrać imię i nazwisko nauczyciela, program ma wypisać wszystkie klasy, które prowadzi nauczyciel.
 # Polecenie "wychowawca" - Należy pobrać imię i nazwisko nauczyciela, a program ma wypisać wszystkich uczniów, których prowadzi wychowawca.
-# Polecenie "koniec" - Wraca do pierwszego menu.
+# Polecenie "koniec" - Wraca do pierwszego menu.###
 
-class Uczen:
-    def __init__(self, imie, nazwisko, klasa,):
-        self.imie = imie
-        self.nazwisko = nazwisko
-        self.klasa = klasa
-    def __repr__(self):
-        return f"{self.imie} {self.nazwisko}z klasy {self.klasa}"
 
-class Nauczyciel:
-    def __init__(self, imie, naziwisko, przedmiot):
-        self.imie = imie
-        self.nazwisko = naziwisko
-        self.przedmiot = przedmiot
-    def __repr__(self):
-        return f"{self.imie} {self.nazwisko} naucza {self.przedmiot}"
 
-class Wychowawca:
-    def __init__(self, imie, nazwisko, prowadzona_klasa):
-        self.imie = imie
-        self.nazwisko = nazwisko
-        self.prowadzona_klasa = prowadzona_klasa
-    def __repr__(self):
-        return f"{self.imie} {self.nazwisko} jest wychowawcą klasy {self.prowadzona_klasa}"
+class bazaszkoly:
+    def __init__(self):
 
-def menu(self):
-    while True:
-        wybor_uzytkownika = input("Podaj działanie:\n"
-                                  "1. Utwórz"
-                                  "2. Zarządzaj"
-                                  "3. Koniec")
-        if wybor_uzytkownika in ("1", "Utwórz"):
-            pass
-        elif wybor_uzytkownika in ("2", "Zarzadzaj"):
-            pass
-        elif wybor_uzytkownika in ("3", "Koniec"):
-            break
-        else:
-            print("Nieprawidłowa komenda!")
+        self.uczniowie = {}
+        self.nauczyciele = {}
+        self.wychowawca= {}
+
+    def menu(self):
+        while True:
+            command = input("Wpisz polecenie które chcesz wykonać(utwórz,zarządzaj,koniec").strip().lower()
+            if command == "utwórz":
+                self.create_user()
+            elif command == "zarządzaj":
+                self.manage_user()
+            elif command == "koniec":
+                print("Zakończono działanie programu")
+                break
+            else:
+                print("Nieprawidłowa komenda spróbuj ponownie")
+
+        def create_user(self):
+            while True:
+                if command
+
