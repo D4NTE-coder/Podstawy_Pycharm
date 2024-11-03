@@ -86,5 +86,6 @@ while True:
     elif wybor_uzytkownika in ("3", "Zakończ"):
         break
     else:
+
             print("Nieprawidłowa Komenda!")
 
