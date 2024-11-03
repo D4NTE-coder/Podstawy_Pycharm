@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="dodanie wysylania ostatniej paczki&#10;dodanie funkcji obliczajacej numer paczki która ma najwiecej pustych kg i ile tych pustych kg jest.">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="dodanie mozliwosci tworzenia użytkowników (uczen,nauczyciel,wychowawca)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bazaszkolna.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/schooldatabase.py" beforeDir="false" afterPath="$PROJECT_DIR$/schooldatabase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemksiegowy.py" beforeDir="false" afterPath="$PROJECT_DIR$/systemksiegowy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ładowarkapaczki.py" beforeDir="false" afterPath="$PROJECT_DIR$/ładowarkapaczki.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Życzenia_urodzinowe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Życzenia_urodzinowe.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +50,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.bazaszkolna.executor&quot;: &quot;Run&quot;,
     &quot;Python.gra.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.proba.executor&quot;: &quot;Run&quot;,
+    &quot;Python.schooldatabase.executor&quot;: &quot;Run&quot;,
+    &quot;Python.systemksiegowy.executor&quot;: &quot;Run&quot;,
     &quot;Python.ładowarkapaczki.executor&quot;: &quot;Run&quot;,
     &quot;Python.Życzenia_urodzinowe.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -199,8 +207,59 @@
       <option name="project" value="LOCAL" />
       <updated>1728746319465</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="stworzenie klasy bazyszkoly oraz menu startowe uzytkownika">
+      <option name="closed" value="true" />
+      <created>1730030517103</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1730030517103</updated>
+    </task>
+    <task id="LOCAL-00018" summary="stworzenie klasy bazyszkoly oraz menu startowe uzytkownika">
+      <option name="closed" value="true" />
+      <created>1730622072860</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1730622072860</updated>
+    </task>
+    <task id="LOCAL-00019" summary="stworzenie klas podstawowych oraz menu">
+      <option name="closed" value="true" />
+      <created>1730626158158</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1730626158158</updated>
+    </task>
+    <task id="LOCAL-00020" summary="stworzenie klas podstawowych oraz menu">
+      <option name="closed" value="true" />
+      <created>1730629073750</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1730629073750</updated>
+    </task>
+    <task id="LOCAL-00021" summary="dodanie mozliwosci tworzenia użytkowników (uczen,nauczyciel,wychowawca)">
+      <option name="closed" value="true" />
+      <created>1730641966676</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1730641966676</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Stworzenie programu" />
@@ -215,6 +274,9 @@
     <MESSAGE value="Wyswietlanie danych poczatkowe (sprawdzenie)" />
     <MESSAGE value="Wyswietlanie danych(Suma wag oraz suma pustych kilogramow, zaokraglenie 4 miejsca po przecinku)" />
     <MESSAGE value="dodanie wysylania ostatniej paczki&#10;dodanie funkcji obliczajacej numer paczki która ma najwiecej pustych kg i ile tych pustych kg jest." />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie wysylania ostatniej paczki&#10;dodanie funkcji obliczajacej numer paczki która ma najwiecej pustych kg i ile tych pustych kg jest." />
+    <MESSAGE value="stworzenie klasy bazyszkoly oraz menu startowe uzytkownika" />
+    <MESSAGE value="stworzenie klas podstawowych oraz menu" />
+    <MESSAGE value="dodanie mozliwosci tworzenia użytkowników (uczen,nauczyciel,wychowawca)" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodanie mozliwosci tworzenia użytkowników (uczen,nauczyciel,wychowawca)" />
   </component>
 </project>

@@ -33,12 +33,16 @@ for element in range(liczba_elementow):
             ## sprawdzenie czy przeslyka zmieni sie w paczce
             if aktualna_waga_paczki + waga_elementu <= 20:
                 aktualna_waga_paczki += waga_elementu
-                print(f"Element o wadze {Fore.YELLOW}{waga_elementu}{Style.RESET_ALL} został dodany do {Fore.YELLOW}{obecna_paczka}")
+                print(
+                    f"Element o wadze {Fore.YELLOW}{waga_elementu}{Style.RESET_ALL} został dodany do {Fore.YELLOW}{obecna_paczka}"
+                )
 
             ## jezeli przedmiot nie miesci sie w obecnej paczce zapisujemy go i dodajemy do nowej paczki
             else:
                 paczki.append((obecna_paczka, aktualna_waga_paczki))
-                print(f"Obecna paczka osiagnela {Fore.YELLOW}{obecna_paczka}{Style.RESET_ALL} limit i została wysłana z wagą {Fore.YELLOW}{aktualna_waga_paczki}kg")
+                print(
+                    f"Obecna paczka osiagnela {Fore.YELLOW}{obecna_paczka}{Style.RESET_ALL} limit i została wysłana z wagą {Fore.YELLOW}{aktualna_waga_paczki}kg"
+                )
                 obecna_paczka += 1
                 aktualna_waga_paczki = waga_elementu
                 print(f"Tworzenie nowej paczki {Fore.YELLOW}{obecna_paczka}")
@@ -46,7 +50,7 @@ for element in range(liczba_elementow):
         except ValueError:
             print("Waga elementu elementu musi być liczbą!")
 
-     ## paczka powyzej/ponizej przedzialu - bład ! jezeli jest to pierwszy element komunikat jezeli sa paczki juz zapakowane to podsumowanie
+    ## paczka powyzej/ponizej przedzialu - bład ! jezeli jest to pierwszy element komunikat jezeli sa paczki juz zapakowane to podsumowanie
     if waga_elementu < 1 or waga_elementu > 10:
         break
 
@@ -54,30 +58,35 @@ for element in range(liczba_elementow):
 ## wyslanie ostatniej paczki
 if aktualna_waga_paczki > 0:
     paczki.append((obecna_paczka, aktualna_waga_paczki))
-    print(f"Paczka {Fore.YELLOW}{obecna_paczka}{Style.RESET_ALL} zostala wysłana z wagą {Fore.YELLOW}{aktualna_waga_paczki}")
+    print(
+        f"Paczka {Fore.YELLOW}{obecna_paczka}{Style.RESET_ALL} zostala wysłana z wagą {Fore.YELLOW}{aktualna_waga_paczki}"
+    )
 
 
 ## wyświetlanie danych
-separator=("-"*100)
+separator = "-" * 100
 liczba_paczek = []
 suma_wag_paczek = []
 suma_pustych_kilo = []
 paczka_z_pustymi = []
-najwiecej_pustych_kilo= []
+najwiecej_pustych_kilo = []
 
 if paczki:
     liczba_paczek = len(paczki)
     suma_wag_paczek = sum(waga for _, waga in paczki)
     suma_pustych_kilo = liczba_paczek * 20 - suma_wag_paczek
-    paczka_z_pustymi = max(paczki,key=lambda x: 20 - x[1] )
+    paczka_z_pustymi = max(paczki, key=lambda x: 20 - x[1])
     najwiecej_pustych_kilo = 20 - paczka_z_pustymi[1]
 
-
-    print(f"""\n{Fore.BLACK}{separator}{Style.RESET_ALL}\n
+    print(
+        f"""\n{Fore.BLACK}{separator}{Style.RESET_ALL}\n
     Liczba paczek wysłanych {Fore.YELLOW}{liczba_paczek}{Style.RESET_ALL}\n
     Suma wysłanych kilogramów {Fore.YELLOW}{suma_wag_paczek:.4f} kg{Style.RESET_ALL}\n
     Suma wysłanych pustych kilogramów {Fore.YELLOW}{suma_pustych_kilo:.4f} kg{Style.RESET_ALL}\n
     Paczka zawaierająca najwiecej pustych kilogramów to paczka: {Fore.YELLOW}{paczka_z_pustymi[0]}{Style.RESET_ALL} i zawierała ona {Fore.YELLOW}{najwiecej_pustych_kilo:.2f} kg{Style.RESET_ALL} pustych kilogramów\n
-    {Fore.BLACK}{separator}""")
+    {Fore.BLACK}{separator}"""
+    )
 else:
-    print(f"\n{Fore.RED}Brak wysłanych paczek — operacja zakończona przed wysyłką.{Style.RESET_ALL}")
+    print(
+        f"\n{Fore.RED}Brak wysłanych paczek — operacja zakończona przed wysyłką.{Style.RESET_ALL}"
+    )
