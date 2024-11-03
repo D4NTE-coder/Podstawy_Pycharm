@@ -50,6 +50,10 @@ class wychowawca:
     def __repr__(self):
         return f"{self.imie} {self.nazwisko} jest wychowawcą klasy {self.prowadzona_klasa}"
 
+klasy = []
+uczniowie = []
+wychowawcy = []
+nauczyciele = []
 
 while True:
     wybor_uzytkownika = input("Podaj działanie:\n"
@@ -57,11 +61,30 @@ while True:
                                   "2. Zarządzaj\n"
                                   "3. Zakończ\n")
     if wybor_uzytkownika in ("1", "Utwórz"):
-        pass
+        dodawanie = input("Jakiego użytkownika chcesz dodać: \n"
+                          "1. Uczeń\n"
+                          "2. Nauczyciel\n"
+                          "3. Wychowawca\n")
+        if dodawanie == "1":
+            imie = input("Podaj imie ucznia: ")
+            nazwisko = input("Podaj nazwisko ucznia: ")
+            klasa = input("Podaj klase do której chodzi uczeń: ")
+            uczniowie.append(uczen(imie,nazwisko,klasa))
+        elif dodawanie == "2":
+            imie = input("Podaj imie nauczyciela: ")
+            nazwisko = input("Podaj nazwisko nauczyciela: ")
+            przedmiot = input("Podaj przedmiot którego uczy nauczyciel: ")
+            nauczyciele.append(nauczyciel(imie,nazwisko,przedmiot))
+        elif dodawanie == "3":
+            imie = input("Podaj imie wychowawcy")
+            nazwisko = input("Podaj nazwisko wychowawcy")
+            prowadzona_klasa = input("Podaj klasę która prowadzi wychowawca")
+            wychowawcy.append(wychowawca(imie,nazwisko,prowadzona_klasa))
+
     elif wybor_uzytkownika in ("2", "Zarządzaj"):
         pass
     elif wybor_uzytkownika in ("3", "Zakończ"):
         break
     else:
-        print("Nieprawidłowa Komenda!")
+            print("Nieprawidłowa Komenda!")
 
