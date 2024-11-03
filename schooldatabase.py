@@ -60,9 +60,19 @@ class Wychowawca:
 def wyszukiwanie_uczniów_w_klasie(nazwa_klasy):
     uczniowie_klasa = [uczen for uczen in uczniowie if uczen.klasa == nazwa_klasy]
 
-    wychowawca_klasy = next((wychowawca for wychowawca in wychowawcy if wychowawca.prowadzona_klasa == nazwa_klasy),
-                            None)
+    wychowawca_klasy = next((wychowawca for wychowawca in wychowawcy if wychowawca.prowadzona_klasa == nazwa_klasy),None)
     return uczniowie_klasa, wychowawca_klasy
+
+def zarzadzaj_klasa():
+    nazwa_klasy = input("Podaj Klase którą chcesz sprawdzić")
+    uczniowie_klasa, wychowawca_klasy = wyszukiwanie_uczniów_w_klasie(nazwa_klasy)
+    print(f"\nUczniowie w klasie {nazwa_klasy}:")
+    for uczen in uczniowie_klasa:
+        print(f" - {Fore.YELLOW}{uczen}{Style.RESET_ALL}")
+    if wychowawca_klasy:
+        print(f"Wychowawcą klasy {Fore.YELLOW} {nazwa_klasy} {Style.RESET_ALL} jest : {Fore.YELLOW}{wychowawca_klasy}")
+    else:
+        print(f"{Fore.RED}Ta klasa nie ma obecnie wychowawcy{Style.RESET_ALL}")
 
 def zarzadzaj_uczniem():
     imie = input("Podaj imie ucznia: ")
@@ -84,6 +94,19 @@ def zarzadazaj_nauczycielem():
          print(f"Nauczyciel {Fore.CYAN}{nauczyciel.imie} {nauczyciel.nazwisko} {Style.RESET_ALL}nauczajacy {Fore.CYAN}{nauczyciel.przedmiot}{Style.RESET_ALL} prowadzi klasy: {', '.join(nauczyciel.klasy)}")
     else:
         print(f"{Fore.RED}Nie znaleziono nauczyciela o podanych danych!{Style.RESET_ALL}")
+
+def zarzadzaj_wychowawca():
+    imie = input("Podaj imie wychowawcy: ")
+    nazwisko = input("Podaj nazwisko wychowawcy: ")
+    wychowawca = next((wychowawca for wychowawca in wychowawcy if wychowawca.imie == imie and wychowawca.nazwisko == nazwisko), None)
+    if wychowawca:
+        uczniowe_klasa, _= wyszukiwanie_uczniów_w_klasie(wychowawca.prowadzona_klasa)
+        print(f"Wychowawca {Fore.CYAN}{wychowawca.imie} {wychowawca.nazwisko} {Style.RESET_ALL} prowadzi klase {Fore.CYAN}{wychowawca.prowadzona_klasa}{Style.RESET_ALL}")
+        print("Uczniowie tej klasy: ")
+        for uczen in uczniowe_klasa:
+            print(f" - {uczen}")
+    else:
+        print(f"{Fore.RED}Nie zaleziono wychowawcy o podanych danych!{Style.RESET_ALL}")
 
 klasy = []
 uczniowie = []
@@ -131,21 +154,17 @@ while True:
                             "4. Wychowawca\n"
                             "5. Koniec\n")
         if zarzadzanie == "1":
-            nazwa_klasy = input("Podaj Klase którą chcesz sprawdzić")
-            uczniowie_klasa, wychowawca_klasy = wyszukiwanie_uczniów_w_klasie(nazwa_klasy)
-            print(f"\nUczniowie w klasie {nazwa_klasy}:")
-            for uczen in uczniowie_klasa:
-                print(f" - {Fore.YELLOW}{uczen}{Style.RESET_ALL}")
-            if wychowawca_klasy:
-                print(f"Wychowawcą klasy {Fore.YELLOW} {nazwa_klasy} {Style.RESET_ALL} jest : {Fore.YELLOW}{wychowawca_klasy}")
-            else:
-                print(f"{Fore.RED}Ta klasa nie ma obecnie wychowawcy{Style.RESET_ALL}")
+            zarzadzaj_klasa()
         if zarzadzanie == "2":
             zarzadzaj_uczniem()
         if zarzadzanie == "3":
             zarzadazaj_nauczycielem()
+        if zarzadzanie == "4":
+            zarzadzaj_wychowawca()
+        if zarzadzanie == "5":
+            continue
 
-    elif wybor_uzytkownika in ("3", "Zakończ"):
+    elif wybor_uzytkownika == "3" or wybor_uzytkownika.lower() == "zakończ":
         break
     else:
         print("Nieprawidłowa Komenda!")
