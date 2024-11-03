@@ -76,6 +76,15 @@ def zarzadzaj_uczniem():
     else:
         print(f"{Fore.RED}Nie znaleziono ucznia o podanych danych!{Style.RESET_ALL}")
 
+def zarzadazaj_nauczycielem():
+    imie = input("Podaj imie nauczyciela: ")
+    nazwisko = input("Podaj nazwisko nauczyciela: ")
+    nauczyciel = next((nauczyciel for nauczyciel in nauczyciele if nauczyciel.imie == imie and nauczyciel.nazwisko == nazwisko), None)
+    if nauczyciel:
+         print(f"Nauczyciel {Fore.CYAN}{nauczyciel.imie} {nauczyciel.nazwisko} {Style.RESET_ALL}nauczajacy {Fore.CYAN}{nauczyciel.przedmiot}{Style.RESET_ALL} prowadzi klasy: {', '.join(nauczyciel.klasy)}")
+    else:
+        print(f"{Fore.RED}Nie znaleziono nauczyciela o podanych danych!{Style.RESET_ALL}")
+
 klasy = []
 uczniowie = []
 wychowawcy = []
@@ -133,9 +142,8 @@ while True:
                 print(f"{Fore.RED}Ta klasa nie ma obecnie wychowawcy{Style.RESET_ALL}")
         if zarzadzanie == "2":
             zarzadzaj_uczniem()
-
-
-
+        if zarzadzanie == "3":
+            zarzadazaj_nauczycielem()
 
     elif wybor_uzytkownika in ("3", "Zakończ"):
         break
