@@ -23,7 +23,10 @@
 # Polecenie "wychowawca" - Należy pobrać imię i nazwisko nauczyciela, a program ma wypisać wszystkich uczniów, których prowadzi wychowawca.
 # Polecenie "koniec" - Wraca do pierwszego menu.
 
-class uczen:
+from colorama import Fore, Style, init
+
+init(autoreset=True)
+class Uczen:
     def __init__(self, imie, nazwisko, klasa):
         self.imie = imie
         self.nazwisko = nazwisko
@@ -32,16 +35,21 @@ class uczen:
     def __repr__(self):
         return f"{self.imie} {self.nazwisko} z klasy {self.klasa}"
 
-class nauczyciel:
+class Nauczyciel:
     def __init__(self, imie, nazwisko, przedmiot):
         self.imie = imie
         self.nazwisko = nazwisko
         self.przedmiot = przedmiot
+        self.klasy = []
+
+    def dodaj_klase(self, klasa):
+        self.klasy.append(klasa)
 
     def __repr__(self):
-        return f"{self.imie} {self.nazwisko} jest nauczycielem {self.przedmiot}"
+        klasy_str = ", ".join(self.klasy) if self.klasy else "Brak klas"
+        return f"{self.imie} {self.nazwisko} jest nauczycielem {self.przedmiot} i prowadzi klasy: {klasy_str}"
 
-class wychowawca:
+class Wychowawca:
     def __init__(self, imie, nazwisko, prowadzona_klasa):
         self.imie = imie
         self.nazwisko = nazwisko
@@ -49,6 +57,13 @@ class wychowawca:
 
     def __repr__(self):
         return f"{self.imie} {self.nazwisko} jest wychowawcą klasy {self.prowadzona_klasa}"
+
+def wyszukiwanie_uczniów_w_klasie(nazwa_klasy):
+    uczniowie_klasa = [uczen for uczen in uczniowie if uczen.klasa == nazwa_klasy]
+
+    wychowawca_klasy = next((wychowawca for wychowawca in wychowawcy if wychowawca.prowadzona_klasa == nazwa_klasy),
+                            None)
+    return uczniowie_klasa, wychowawca_klasy
 
 klasy = []
 uczniowie = []
@@ -69,23 +84,49 @@ while True:
             imie = input("Podaj imie ucznia: ")
             nazwisko = input("Podaj nazwisko ucznia: ")
             klasa = input("Podaj klase do której chodzi uczeń: ")
-            uczniowie.append(uczen(imie,nazwisko,klasa))
+            uczniowie.append(Uczen(imie,nazwisko,klasa))
         elif dodawanie == "2":
             imie = input("Podaj imie nauczyciela: ")
             nazwisko = input("Podaj nazwisko nauczyciela: ")
             przedmiot = input("Podaj przedmiot którego uczy nauczyciel: ")
-            nauczyciele.append(nauczyciel(imie,nazwisko,przedmiot))
+            nauczyciel = Nauczyciel (imie, nazwisko, przedmiot)
+            while True:
+                klasa = input("Podaj nazwę klasy,którą prowadzi nauczyciel (Lub zostaw puste, aby zakonczyc): ")
+                if klasa =="":
+                    break
+                nauczyciel.dodaj_klase(klasa)
+            nauczyciele.append(nauczyciel)
+
         elif dodawanie == "3":
-            imie = input("Podaj imie wychowawcy")
-            nazwisko = input("Podaj nazwisko wychowawcy")
-            prowadzona_klasa = input("Podaj klasę która prowadzi wychowawca")
-            wychowawcy.append(wychowawca(imie,nazwisko,prowadzona_klasa))
+            imie = input("Podaj imie wychowawcy: ")
+            nazwisko = input("Podaj nazwisko wychowawcy: ")
+            prowadzona_klasa = input("Podaj klasę która prowadzi wychowawca: ")
+            wychowawcy.append(Wychowawca(imie,nazwisko,prowadzona_klasa))
 
     elif wybor_uzytkownika in ("2", "Zarządzaj"):
-        pass
+        zarzadzanie = input("Jakim typem użytkownika chcesz zarządzać: \n"
+                            "1. Klasa\n"
+                            "2. Uczeń\n"
+                            "3. Nauczyciel\n"
+                            "4. Wychowawca\n"
+                            "5. Koniec\n")
+        if zarzadzanie == "1":
+            nazwa_klasy = input("Podaj Klase którą chcesz sprawdzić")
+            uczniowie_klasa, wychowawca_klasy = wyszukiwanie_uczniów_w_klasie(nazwa_klasy)
+            print(f"\nUczniowie w klasie {nazwa_klasy}:")
+            for uczen in uczniowie_klasa:
+                print(f" - {Fore.YELLOW}{uczen}{Style.RESET_ALL}")
+            if wychowawca_klasy:
+                print(f"Wychowawcą klasy {Fore.YELLOW} {nazwa_klasy} {Style.RESET_ALL} jest : {Fore.YELLOW}{wychowawca_klasy}")
+            else:
+                print(f"{Fore.RED}Ta klasa nie ma obecnie wychowawcy{Style.RESET_ALL}")
+        if zarzadzanie == "2":
+
+
+
+
     elif wybor_uzytkownika in ("3", "Zakończ"):
         break
     else:
-
-            print("Nieprawidłowa Komenda!")
+        print("Nieprawidłowa Komenda!")
 
