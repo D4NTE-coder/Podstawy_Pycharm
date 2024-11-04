@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="dodanie mozliwosci tworzenia użytkowników (uczen,nauczyciel,wychowawca)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schooldatabase.py" beforeDir="false" afterPath="$PROJECT_DIR$/schooldatabase.py" afterDir="false" />
-    </list>
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="usuniecie komentarzy" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -259,7 +256,55 @@
       <option name="project" value="LOCAL" />
       <updated>1730642343262</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="dodawanie klas - sprawdzanie uczniow po klasach.">
+      <option name="closed" value="true" />
+      <created>1730649341713</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1730649341713</updated>
+    </task>
+    <task id="LOCAL-00025" summary="zarządzanie uczniem - wyswietlanie lekcji po wczesniejszym dodaniu nauczyciela z danym przedmiotem i klasą">
+      <option name="closed" value="true" />
+      <created>1730650807067</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1730650807068</updated>
+    </task>
+    <task id="LOCAL-00026" summary="wyswietlanie klasy przy zarzadzaniu uczeniem">
+      <option name="closed" value="true" />
+      <created>1730651062549</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1730651062549</updated>
+    </task>
+    <task id="LOCAL-00027" summary="dodanie zarządzania nauczycielem - klasy które uczy + przedmiotu">
+      <option name="closed" value="true" />
+      <created>1730651869339</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1730651869339</updated>
+    </task>
+    <task id="LOCAL-00028" summary="dodanie zarzadzanie klasa - poprawiona wersja + dodanie zarzadzanie wychowawca i poprawiono spójnosc kodu">
+      <option name="closed" value="true" />
+      <created>1730653492293</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1730653492293</updated>
+    </task>
+    <task id="LOCAL-00029" summary="usuniecie komentarzy">
+      <option name="closed" value="true" />
+      <created>1730653847172</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1730653847172</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -289,6 +334,12 @@
     <MESSAGE value="stworzenie klasy bazyszkoly oraz menu startowe uzytkownika" />
     <MESSAGE value="stworzenie klas podstawowych oraz menu" />
     <MESSAGE value="dodanie mozliwosci tworzenia użytkowników (uczen,nauczyciel,wychowawca)" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie mozliwosci tworzenia użytkowników (uczen,nauczyciel,wychowawca)" />
+    <MESSAGE value="dodawanie klas - sprawdzanie uczniow po klasach." />
+    <MESSAGE value="zarządzanie uczniem - wyswietlanie lekcji po wczesniejszym dodaniu nauczyciela z danym przedmiotem i klasą" />
+    <MESSAGE value="wyswietlanie klasy przy zarzadzaniu uczeniem" />
+    <MESSAGE value="dodanie zarządzania nauczycielem - klasy które uczy + przedmiotu" />
+    <MESSAGE value="dodanie zarzadzanie klasa - poprawiona wersja + dodanie zarzadzanie wychowawca i poprawiono spójnosc kodu" />
+    <MESSAGE value="usuniecie komentarzy" />
+    <option name="LAST_COMMIT_MESSAGE" value="usuniecie komentarzy" />
   </component>
 </project>
