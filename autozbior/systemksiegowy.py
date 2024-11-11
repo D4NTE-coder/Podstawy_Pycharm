@@ -1,7 +1,7 @@
 from colorama import Fore, Style, init
 from file_hander import FileHandler
 
-file_handler = FileHandler(data_file ="dane_salonu.json", history_file="historia.json")
+file_handler = FileHandler(data_file="dane_salonu.json", history_file="historia.json")
 init(autoreset=True)
 
 data = file_handler.load_data_from_data_file()
@@ -160,5 +160,5 @@ while True:
     if wybor_użytkownika == "8":
         break
 
-file_handler.save_data_to_data_file(balance = Saldo, car_collection=autozbior)
-file_handler.save_data_to_history_file(history = kontener)
+file_handler.save_data_to_data_file(balance=Saldo, car_collection=autozbior)
+file_handler.save_data_to_history_file(history=kontener)

@@ -12,14 +12,11 @@ class FileHandler:
 
     def load_data_from_history_file(self):
         with open(self.history_file) as file:
-            return  json.loads(file.read())
+            return json.loads(file.read())
 
     def save_data_to_data_file(self, balance, car_collection):
         with open(self.data_file, mode="w") as file:
-            file.write(json.dumps({
-                "saldo": balance,
-                "autozbior": car_collection
-            }))
+            file.write(json.dumps({"saldo": balance, "autozbior": car_collection}))
 
     def save_data_to_history_file(self, history):
         with open(self.history_file, mode="w") as file:
