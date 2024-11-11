@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="usuniecie komentarzy" />
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="uzycie black . do reformatowania kodu">
+      <change afterPath="$PROJECT_DIR$/autozbior/dane_salonu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autozbior/file_hander.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autozbior/historia.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autozbior/systemksiegowy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,21 +47,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.bazaszkolna.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gra.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.proba.executor&quot;: &quot;Run&quot;,
-    &quot;Python.schooldatabase.executor&quot;: &quot;Run&quot;,
-    &quot;Python.systemksiegowy.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ładowarkapaczki.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Życzenia_urodzinowe.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.bazaszkolna.executor": "Run",
+    "Python.gra.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.proba.executor": "Run",
+    "Python.schooldatabase.executor": "Run",
+    "Python.systemksiegowy.executor": "Run",
+    "Python.ładowarkapaczki.executor": "Run",
+    "Python.Życzenia_urodzinowe.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/autozbior"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\autozbior" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="systemksiegowy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Podstawy_Pycharm" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/autozbior" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/autozbior/systemksiegowy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.systemksiegowy" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -304,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730653847172</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="uzycie black . do reformatowania kodu">
+      <option name="closed" value="true" />
+      <created>1730747516984</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1730747516984</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,6 +389,7 @@
     <MESSAGE value="dodanie zarządzania nauczycielem - klasy które uczy + przedmiotu" />
     <MESSAGE value="dodanie zarzadzanie klasa - poprawiona wersja + dodanie zarzadzanie wychowawca i poprawiono spójnosc kodu" />
     <MESSAGE value="usuniecie komentarzy" />
-    <option name="LAST_COMMIT_MESSAGE" value="usuniecie komentarzy" />
+    <MESSAGE value="uzycie black . do reformatowania kodu" />
+    <option name="LAST_COMMIT_MESSAGE" value="uzycie black . do reformatowania kodu" />
   </component>
 </project>
