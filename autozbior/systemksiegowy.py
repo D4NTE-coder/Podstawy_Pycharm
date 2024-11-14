@@ -157,8 +157,11 @@ while True:
                 f"{Fore.RED}Podano nieprawidłowe wartości indeksów.{Style.RESET_ALL} "
             )
         kontener.append(f"Sprawdzono historię działań od {od} do {do}")
+
+    file_handler.save_data_to_data_file(balance=Saldo, car_collection=autozbior)
+    file_handler.save_data_to_history_file(history=kontener)
+
     if wybor_użytkownika == "8":
         break
 
-file_handler.save_data_to_data_file(balance=Saldo, car_collection=autozbior)
-file_handler.save_data_to_history_file(history=kontener)
+

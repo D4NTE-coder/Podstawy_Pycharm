@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="dodanie funkcjonalnosci zapisu oraz odczytu danych z pliku">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autozbior/dane_salonu.json" beforeDir="false" afterPath="$PROJECT_DIR$/autozbior/dane_salonu.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autozbior/historia.json" beforeDir="false" afterPath="$PROJECT_DIR$/autozbior/historia.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autozbior/systemksiegowy.py" beforeDir="false" afterPath="$PROJECT_DIR$/autozbior/systemksiegowy.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,22 +46,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.bazaszkolna.executor": "Run",
-    "Python.gra.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.proba.executor": "Run",
-    "Python.schooldatabase.executor": "Run",
-    "Python.systemksiegowy.executor": "Run",
-    "Python.ładowarkapaczki.executor": "Run",
-    "Python.Życzenia_urodzinowe.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/autozbior"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.bazaszkolna.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gra.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.proba.executor&quot;: &quot;Run&quot;,
+    &quot;Python.schooldatabase.executor&quot;: &quot;Run&quot;,
+    &quot;Python.systemksiegowy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ładowarkapaczki.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Życzenia_urodzinowe.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/autozbior&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\autozbior" />
@@ -358,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731337842933</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="dodanie funkcjonalnosci zapisu oraz odczytu danych z pliku">
+      <option name="closed" value="true" />
+      <created>1731350725022</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1731350725022</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
