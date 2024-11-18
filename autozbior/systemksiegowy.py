@@ -89,20 +89,19 @@ while True:
         samochod_istnieje = False
         for samochod in autozbior:
             if (
-                    samochod["marka"] == marka
-                    and samochod["model"] == model
-                    and samochod["rok"] == rok
-                    and samochod["kolor"] == kolor
-                    and samochod["silnik"] == silnik
-                    and samochod["przebieg"] == przebieg
-                    and samochod["cena"] == cena_sprzedarz
+                samochod["marka"] == marka
+                and samochod["model"] == model
+                and samochod["rok"] == rok
+                and samochod["kolor"] == kolor
+                and samochod["silnik"] == silnik
+                and samochod["przebieg"] == przebieg
+                and samochod["cena"] == cena_sprzedarz
             ):
                 samochod["ilość_sztuk"] += ilosc_sztuk
                 samochod["ilość_dostepnych_sztuk"] += ilosc_sztuk
                 samochod_istnieje = True
                 print(f"Zwiększono ilość {marka} {model} {rok} o {ilosc_sztuk} sztuk.")
                 break
-
 
         if not samochod_istnieje:
             autozbior.append(
@@ -182,5 +181,3 @@ while True:
 
     if wybor_użytkownika == "8":
         break
-
-
