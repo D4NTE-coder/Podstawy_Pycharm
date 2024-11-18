@@ -36,7 +36,7 @@ while True:
     elif wybor_użytkownika == "2":
         marka = input("Podaj marke którą chcesz sprzedać: ")
         model = input("Podaj model który chcesz sprzedać: ")
-        rok = input("Podaj rok wyprodukowania: ")
+        rok = int(input("Podaj rok wyprodukowania: "))
         znaleziono_samochod = False
         for samochod in autozbior:
             if (
@@ -86,19 +86,38 @@ while True:
                 f"{Fore.RED}Nie posiadasz wystarczająch środków zeby kupić pojazd:{Style.RESET_ALL} {separator}"
             )
             continue
-        autozbior.append(
-            {
-                "marka": marka,
-                "model": model,
-                "rok": rok,
-                "kolor": kolor,
-                "silnik": silnik,
-                "przebieg": przebieg,
-                "ilość_sztuk": ilosc_sztuk,
-                "ilość_dostepnych_sztuk": ilosc_sztuk,
-                "cena": cena_sprzedarz,
-            }
-        )
+        samochod_istnieje = False
+        for samochod in autozbior:
+            if (
+                    samochod["marka"] == marka
+                    and samochod["model"] == model
+                    and samochod["rok"] == rok
+                    and samochod["kolor"] == kolor
+                    and samochod["silnik"] == silnik
+                    and samochod["przebieg"] == przebieg
+                    and samochod["cena"] == cena_sprzedarz
+            ):
+                samochod["ilość_sztuk"] += ilosc_sztuk
+                samochod["ilość_dostepnych_sztuk"] += ilosc_sztuk
+                samochod_istnieje = True
+                print(f"Zwiększono ilość {marka} {model} {rok} o {ilosc_sztuk} sztuk.")
+                break
+
+
+        if not samochod_istnieje:
+            autozbior.append(
+                {
+                    "marka": marka,
+                    "model": model,
+                    "rok": rok,
+                    "kolor": kolor,
+                    "silnik": silnik,
+                    "przebieg": przebieg,
+                    "ilość_sztuk": ilosc_sztuk,
+                    "ilość_dostepnych_sztuk": ilosc_sztuk,
+                    "cena": cena_sprzedarz,
+                }
+            )
         Saldo -= ilosc_sztuk * cena_zakup
         print(f"Dodano pojazd {Fore.YELLOW}{marka} {model} {rok}{Style.RESET_ALL}")
         kontener.append(f"Dodano pojazd {marka} {model} {rok}")

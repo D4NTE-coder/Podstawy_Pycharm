@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="dodanie funkcjonalnosci zapisu oraz odczytu danych z pliku">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="dodanie pliku requirements.txt + zapisywanie danych przy awaryjnym wylaczaniu programu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autozbior/dane_salonu.json" beforeDir="false" afterPath="$PROJECT_DIR$/autozbior/dane_salonu.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autozbior/historia.json" beforeDir="false" afterPath="$PROJECT_DIR$/autozbior/historia.json" afterDir="false" />
@@ -368,7 +368,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731350725022</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="dodanie pliku requirements.txt + zapisywanie danych przy awaryjnym wylaczaniu programu">
+      <option name="closed" value="true" />
+      <created>1731607405862</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1731607405862</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -406,6 +414,7 @@
     <MESSAGE value="usuniecie komentarzy" />
     <MESSAGE value="uzycie black . do reformatowania kodu" />
     <MESSAGE value="dodanie funkcjonalnosci zapisu oraz odczytu danych z pliku" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie funkcjonalnosci zapisu oraz odczytu danych z pliku" />
+    <MESSAGE value="dodanie pliku requirements.txt + zapisywanie danych przy awaryjnym wylaczaniu programu" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodanie pliku requirements.txt + zapisywanie danych przy awaryjnym wylaczaniu programu" />
   </component>
 </project>
