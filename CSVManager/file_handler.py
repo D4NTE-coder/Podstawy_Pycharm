@@ -26,7 +26,9 @@ class FileHandler:
                 if 0 <= y < len(self.data) and 0 <= x < len(self.data[y]):
                     self.data[y][x] = value
                 else:
-                    print(f"Nieprawidłowa transformacja: {transformation} (poza zakresem)")
+                    print(
+                        f"Nieprawidłowa transformacja: {transformation} (poza zakresem)"
+                    )
             except ValueError:
                 print(f"Nieprawidłowy format transformacji: {transformation}")
 

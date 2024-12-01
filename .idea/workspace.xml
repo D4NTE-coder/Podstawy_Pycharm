@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="dodanie pliku requirements.txt + zapisywanie danych przy awaryjnym wylaczaniu programu">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Manager Plikow CSV po tescie">
+      <change afterPath="$PROJECT_DIR$/CSVManager/Manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSVManager/file_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSVManager/in.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSVManager/out.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autozbior/dane_salonu.json" beforeDir="false" afterPath="$PROJECT_DIR$/autozbior/dane_salonu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autozbior/historia.json" beforeDir="false" afterPath="$PROJECT_DIR$/autozbior/historia.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autozbior/systemksiegowy.py" beforeDir="false" afterPath="$PROJECT_DIR$/autozbior/systemksiegowy.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,25 +47,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.bazaszkolna.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gra.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.proba.executor&quot;: &quot;Run&quot;,
-    &quot;Python.schooldatabase.executor&quot;: &quot;Run&quot;,
-    &quot;Python.systemksiegowy.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ładowarkapaczki.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Życzenia_urodzinowe.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/autozbior&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Manager.executor": "Run",
+    "Python.bazaszkolna.executor": "Run",
+    "Python.gra.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.proba.executor": "Run",
+    "Python.schooldatabase.executor": "Run",
+    "Python.systemksiegowy.executor": "Run",
+    "Python.ładowarkapaczki.executor": "Run",
+    "Python.Życzenia_urodzinowe.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/autozbior"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\autozbior" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\CSVManager" />
     </key>
   </component>
   <component name="RunManager">
@@ -376,7 +381,39 @@
       <option name="project" value="LOCAL" />
       <updated>1731607405862</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="dodanie poprawnosci sprzedarzy oraz nie dublowania sie samochodów">
+      <option name="closed" value="true" />
+      <created>1731941783377</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1731941783377</updated>
+    </task>
+    <task id="LOCAL-00035" summary="reformatowanie tekstu">
+      <option name="closed" value="true" />
+      <created>1731941827732</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1731941827732</updated>
+    </task>
+    <task id="LOCAL-00036" summary="biblioteki">
+      <option name="closed" value="true" />
+      <created>1731952639327</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1731952639327</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Manager Plikow CSV po tescie">
+      <option name="closed" value="true" />
+      <created>1733080471027</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1733080471027</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -391,9 +428,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Stworzenie programu" />
-    <MESSAGE value="usuniecie wywolania podwójnego int(rok)" />
-    <MESSAGE value="Zmiana nazwy pliku z main na Zyczenia_urodzinowe" />
     <MESSAGE value="Wizualne poprawienie i formatowanie tekstu oraz poprawienie bledow" />
     <MESSAGE value="poprawienie bledow" />
     <MESSAGE value="Tworzenie podstawowego kodu - pobieranie liczby elementów - dodanie zmiennych" />
@@ -415,6 +449,10 @@
     <MESSAGE value="uzycie black . do reformatowania kodu" />
     <MESSAGE value="dodanie funkcjonalnosci zapisu oraz odczytu danych z pliku" />
     <MESSAGE value="dodanie pliku requirements.txt + zapisywanie danych przy awaryjnym wylaczaniu programu" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie pliku requirements.txt + zapisywanie danych przy awaryjnym wylaczaniu programu" />
+    <MESSAGE value="dodanie poprawnosci sprzedarzy oraz nie dublowania sie samochodów" />
+    <MESSAGE value="reformatowanie tekstu" />
+    <MESSAGE value="biblioteki" />
+    <MESSAGE value="Manager Plikow CSV po tescie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Manager Plikow CSV po tescie" />
   </component>
 </project>

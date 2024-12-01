@@ -3,7 +3,9 @@ from file_handler import FileHandler
 
 if __name__ == "__main__":
     if len(sys.argv) < 4:
-        print("Użycie: python Manager.py <plik_wejsciowy> <plik_wyjsciowy> <zmiana_1> <zmiana_2> ... <zmiana_n>")
+        print(
+            "Użycie: python Manager.py <plik_wejsciowy> <plik_wyjsciowy> <zmiana_1> <zmiana_2> ... <zmiana_n>"
+        )
         sys.exit(1)
 
     input_file = sys.argv[1]
@@ -12,10 +14,8 @@ if __name__ == "__main__":
     handler = FileHandler(input_file, output_file, transformations)
     handler.transform()
 
-    # Wyświetlamy zmodyfikowane dane
     print("Zmienione dane:")
     handler.display_data()
 
-    # Zapisujemy zmodyfikowane dane do pliku
     handler.save_data_to_output_file()
     print(f"Dane zapisano do pliku: {output_file}")
