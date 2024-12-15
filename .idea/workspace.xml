@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Manager Plikow CSV po tescie">
-      <change afterPath="$PROJECT_DIR$/CSVManager/Manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSVManager/file_handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSVManager/in.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSVManager/out.csv" afterDir="false" />
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="refactor kodu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,23 +43,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Manager.executor": "Run",
-    "Python.bazaszkolna.executor": "Run",
-    "Python.gra.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.proba.executor": "Run",
-    "Python.schooldatabase.executor": "Run",
-    "Python.systemksiegowy.executor": "Run",
-    "Python.ładowarkapaczki.executor": "Run",
-    "Python.Życzenia_urodzinowe.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/autozbior"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Manager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bazaszkolna.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gra.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.proba.executor&quot;: &quot;Run&quot;,
+    &quot;Python.schooldatabase.executor&quot;: &quot;Run&quot;,
+    &quot;Python.systemksiegowy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ładowarkapaczki.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Życzenia_urodzinowe.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/autozbior&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\autozbior" />
@@ -413,7 +409,31 @@
       <option name="project" value="LOCAL" />
       <updated>1733080471027</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Manager Plikow CSV po tescie">
+      <option name="closed" value="true" />
+      <created>1733080575754</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1733080575754</updated>
+    </task>
+    <task id="LOCAL-00039" summary="refactor kodu">
+      <option name="closed" value="true" />
+      <created>1733080688729</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1733080688729</updated>
+    </task>
+    <task id="LOCAL-00040" summary="refactor kodu">
+      <option name="closed" value="true" />
+      <created>1733083061515</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1733083061515</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -428,7 +448,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Wizualne poprawienie i formatowanie tekstu oraz poprawienie bledow" />
     <MESSAGE value="poprawienie bledow" />
     <MESSAGE value="Tworzenie podstawowego kodu - pobieranie liczby elementów - dodanie zmiennych" />
     <MESSAGE value="Dodanie Warunkow dotyczących paczki" />
@@ -453,6 +472,7 @@
     <MESSAGE value="reformatowanie tekstu" />
     <MESSAGE value="biblioteki" />
     <MESSAGE value="Manager Plikow CSV po tescie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manager Plikow CSV po tescie" />
+    <MESSAGE value="refactor kodu" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor kodu" />
   </component>
 </project>
