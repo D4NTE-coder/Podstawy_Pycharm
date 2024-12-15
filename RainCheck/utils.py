@@ -23,6 +23,6 @@ def check_rain(latitude, longitude, searched_date):
         elif rain_sum > 0.0:
             return "Będzie padać"
         else:
-            return "dla Nie bedzie padać"
+            return "Nie bedzie padać"
     else:
         return "Nie wiem"
