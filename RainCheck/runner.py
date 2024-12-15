@@ -1,5 +1,4 @@
 import datetime
-from multiprocessing.managers import Value
 
 from utils import check_rain
 
