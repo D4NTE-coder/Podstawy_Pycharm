@@ -1,6 +1,7 @@
 import requests
 from geopy.geocoders import Nominatim
 
+
 def get_coordinates(city_name):
     geolocator = Nominatim(user_agent="weather_app")
     location = geolocator.geocode(city_name)
@@ -9,8 +10,9 @@ def get_coordinates(city_name):
     else:
         return None
 
+
 def check_rain(latitude, longitude, searched_date):
-    url=f"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&hourly=rain&daily=rain_sum&timezone=Europe%2FLondon&start_date={searched_date}&end_date={searched_date}"
+    url = f"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&hourly=rain&daily=rain_sum&timezone=Europe%2FLondon&start_date={searched_date}&end_date={searched_date}"
 
     response = requests.get(url)
     if response.status_code == 200:

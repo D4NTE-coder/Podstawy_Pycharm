@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="refactor kodu">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Dodanie geopy - program sam wyszukuje współrzedne - modyfikacja kodu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,23 +43,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Manager.executor&quot;: &quot;Run&quot;,
-    &quot;Python.bazaszkolna.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gra.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.proba.executor&quot;: &quot;Run&quot;,
-    &quot;Python.schooldatabase.executor&quot;: &quot;Run&quot;,
-    &quot;Python.systemksiegowy.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ładowarkapaczki.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Życzenia_urodzinowe.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/autozbior&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Manager.executor": "Run",
+    "Python.bazaszkolna.executor": "Run",
+    "Python.gra.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.proba.executor": "Run",
+    "Python.runner.executor": "Run",
+    "Python.schooldatabase.executor": "Run",
+    "Python.systemksiegowy.executor": "Run",
+    "Python.utils.executor": "Run",
+    "Python.ładowarkapaczki.executor": "Run",
+    "Python.Życzenia_urodzinowe.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/autozbior"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\autozbior" />
@@ -433,7 +435,55 @@
       <option name="project" value="LOCAL" />
       <updated>1733083061515</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="dodanie podstawowych funkcjonalnosci programu">
+      <option name="closed" value="true" />
+      <created>1734290054192</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1734290054192</updated>
+    </task>
+    <task id="LOCAL-00042" summary="dodanie podstawowych funkcjonalnosci programu">
+      <option name="closed" value="true" />
+      <created>1734290112956</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1734290112957</updated>
+    </task>
+    <task id="LOCAL-00043" summary="dodanie adresu url API z którego pobieramy dane + dodanie funkcjonalnosci które są opisane w zadaniu">
+      <option name="closed" value="true" />
+      <created>1734290546778</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1734290546778</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Dodanie zarządzanie datami w przypadku nie wprowadzenia daty badz zlego formatu automatycznie zaciagany jest nastepny dzien">
+      <option name="closed" value="true" />
+      <created>1734291491499</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1734291491499</updated>
+    </task>
+    <task id="LOCAL-00045" summary="dodanie file_handler do zapisu i odczytu plikow">
+      <option name="closed" value="true" />
+      <created>1734292051885</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1734292051885</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Dodanie geopy - program sam wyszukuje współrzedne - modyfikacja kodu">
+      <option name="closed" value="true" />
+      <created>1734294921166</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1734294921166</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -448,11 +498,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="poprawienie bledow" />
-    <MESSAGE value="Tworzenie podstawowego kodu - pobieranie liczby elementów - dodanie zmiennych" />
-    <MESSAGE value="Dodanie Warunkow dotyczących paczki" />
-    <MESSAGE value="poprawienie warunków ( przedział paczki)" />
-    <MESSAGE value="poprawienie warunków (sprawdzenia czy element miesci sie w paczce oraz rozpoczynania nowej paczki" />
     <MESSAGE value="Wyswietlanie danych poczatkowe (sprawdzenie)" />
     <MESSAGE value="Wyswietlanie danych(Suma wag oraz suma pustych kilogramow, zaokraglenie 4 miejsca po przecinku)" />
     <MESSAGE value="dodanie wysylania ostatniej paczki&#10;dodanie funkcji obliczajacej numer paczki która ma najwiecej pustych kg i ile tych pustych kg jest." />
@@ -473,6 +518,11 @@
     <MESSAGE value="biblioteki" />
     <MESSAGE value="Manager Plikow CSV po tescie" />
     <MESSAGE value="refactor kodu" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor kodu" />
+    <MESSAGE value="dodanie podstawowych funkcjonalnosci programu" />
+    <MESSAGE value="dodanie adresu url API z którego pobieramy dane + dodanie funkcjonalnosci które są opisane w zadaniu" />
+    <MESSAGE value="Dodanie zarządzanie datami w przypadku nie wprowadzenia daty badz zlego formatu automatycznie zaciagany jest nastepny dzien" />
+    <MESSAGE value="dodanie file_handler do zapisu i odczytu plikow" />
+    <MESSAGE value="Dodanie geopy - program sam wyszukuje współrzedne - modyfikacja kodu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie geopy - program sam wyszukuje współrzedne - modyfikacja kodu" />
   </component>
 </project>
