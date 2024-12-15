@@ -2,6 +2,7 @@ import requests
 
 def check_rain(latitude, logitude, searched_date):
     url=f"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&hourly=rain&daily=rain_sum&timezone=Europe%2FLondon&start_date={searched_date}&end_date={searched_date}"
+
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
@@ -12,6 +13,5 @@ def check_rain(latitude, logitude, searched_date):
             return "Będzie padać"
         else:
             return "Nie bedzie padać"
-
     else:
         return "Nie wiem"
