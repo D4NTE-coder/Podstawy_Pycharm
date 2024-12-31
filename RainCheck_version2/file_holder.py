@@ -8,7 +8,7 @@ class WeatherForecast:
 
     def load_from_file(self):
         try:
-            with open(self.filename,"r") as file:
+            with open(self.filename, "r") as file:
                 return json.load(file)
         except FileNotFoundError:
             return {}
@@ -17,24 +17,17 @@ class WeatherForecast:
         with open(self.filename, "w") as file:
             json.dump(self.data, file, indent=4)
 
-    def save(self, data):
-        self.data.update(data)
+    def save(self, city, date, prediction):
+        if city not in self.data:
+            self.data[city] = {}
+        self.data[city][date] = prediction
         self.save_to_file()
 
-    def load(self):
-        return self.data
+    def get_city_data(self, city):
+        return self.data.get(city, {})
 
-    def __setitem__(self, date, weather_info):
-        self.data[date] = weather_info
-        self.save_to_file()
-
-    def __getitem__(self, date):
-        return self.data.get(date, "Brak Danych")
+    def __getitem__(self, city):
+        return self.data.get(city, "Brak danych")
 
     def __iter__(self):
         return iter(self.data)
-
-    def exist(self, date):
-        return date in self.data
-
-
