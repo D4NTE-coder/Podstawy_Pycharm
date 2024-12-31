@@ -1,8 +1,7 @@
 import datetime
-from colorama import Fore, Style, init
-
 from file_holder import WeatherForecast
 from utils import check_rain, get_coordinates
+from colorama import Fore, Style, init
 
 
 def main():

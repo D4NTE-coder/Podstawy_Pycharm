@@ -19,16 +19,19 @@ class WeatherForecast:
             json.dump(self.data, file, indent=4)
 
     def save(self, city, date, prediction):
-        if city not in self.data:
-            self.data[city] = {}
-        self.data[city][date] = prediction
-        self.save_to_file()
+        self[city] = {date: prediction}
 
     def get_city_data(self, city):
         return self.data.get(city, {})
 
     def __getitem__(self, city):
         return self.data.get(city, "Brak danych")
+
+    def __setitem__(self, city, weather_info):
+        if city not in self.data:
+            self.data[city] = {}
+        self.data[city].update(weather_info)
+        self.save_to_file()
 
     def __iter__(self):
         return iter(self.data)
