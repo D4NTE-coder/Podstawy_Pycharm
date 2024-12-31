@@ -1,5 +1,6 @@
 import json
 
+
 class WeatherForecast:
 
     def __init__(self, filename="result.json"):
