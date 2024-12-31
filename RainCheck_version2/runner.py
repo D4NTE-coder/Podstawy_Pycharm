@@ -7,7 +7,7 @@ def main():
     forecast = WeatherForecast
     while True:
 
-        cities_name = input("Podaj nazwe miast: (oddzielone przecinkami, lub wpisze 'exit' aby zakonczyć")
+        cities_name = input("Podaj nazwe miast(oddzielone przecinkami, lub wpisze 'exit' aby zakonczyć):")
         if cities_name.lower() == "exit":
             break
 
@@ -21,4 +21,5 @@ def main():
 
 
 
-
+if __name__ == "__main__":
+    main()
