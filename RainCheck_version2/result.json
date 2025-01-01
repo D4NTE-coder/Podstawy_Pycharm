@@ -5,7 +5,9 @@
         "2024-12-31": "Nie bedzie pada\u0107",
         "2025-01-10": "Nie bedzie pada\u0107",
         "2025-01-01": "Nie bedzie pada\u0107",
-        "2025-01-15": "Nie bedzie pada\u0107"
+        "2025-01-15": "Nie bedzie pada\u0107",
+        "2025-01-03": "B\u0119dzie pada\u0107",
+        "2025-01-06": "B\u0119dzie pada\u0107"
     },
     "Zawiercie": {
         "date": "2025-01-01",
@@ -15,12 +17,17 @@
         "2025-01-15": "Nie bedzie pada\u0107",
         "2025-03-01": "Nie wiem",
         "2025-01-20": "Nie wiem",
-        "2025-01-05": "B\u0119dzie pada\u0107"
+        "2025-01-05": "B\u0119dzie pada\u0107",
+        "2025-01-03": "B\u0119dzie pada\u0107",
+        "2025-01-04": "Nie bedzie pada\u0107",
+        "2025-01-02": "B\u0119dzie pada\u0107",
+        "2025-01-06": "B\u0119dzie pada\u0107"
     },
     "Warszawa": {
         "2024-12-31": "Nie bedzie pada\u0107",
         "2025-01-10": "Nie bedzie pada\u0107",
-        "2025-01-20": "Nie wiem"
+        "2025-01-20": "Nie wiem",
+        "2025-01-02": "B\u0119dzie pada\u0107"
     },
     "Wroc\u0142aw": {
         "2024-12-31": "Nie bedzie pada\u0107",
@@ -45,14 +52,25 @@
     },
     "Ci\u0105gowice": {
         "2024-12-31": "Nie bedzie pada\u0107",
-        "2025-01-20": "Nie wiem"
+        "2025-01-20": "Nie wiem",
+        "2025-01-03": "B\u0119dzie pada\u0107",
+        "2025-01-06": "B\u0119dzie pada\u0107"
     },
     "Ciagowice": {
         "2024-12-31": "Nie bedzie pada\u0107",
-        "2025-01-05": "B\u0119dzie pada\u0107"
+        "2025-01-05": "B\u0119dzie pada\u0107",
+        "2025-01-02": "B\u0119dzie pada\u0107",
+        "2025-01-03": "B\u0119dzie pada\u0107",
+        "2025-01-04": "Nie bedzie pada\u0107",
+        "searched_date):": "Nie wiem"
     },
     "K\u0142obuck": {
         "2024-12-31": "Nie bedzie pada\u0107",
         "2025-01-05": "B\u0119dzie pada\u0107"
+    },
+    "Bydgoszcz": {
+        "2025-01-03": "Nie bedzie pada\u0107",
+        "2025-01-04": "Nie bedzie pada\u0107",
+        "2025-01-02": "B\u0119dzie pada\u0107"
     }
 }
