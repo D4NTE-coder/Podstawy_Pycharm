@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="dodanie requirements.txt - refactor kodu">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="plik json">
+      <change afterPath="$PROJECT_DIR$/CSVManager_v2/Manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSVManager_v2/file_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSVManager_v2/in.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSVManager_v2/in.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSVManager_v2/in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSVManager_v2/out.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSVManager_v2/out.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSVManager_v2/out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSVManager_v2/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSVManager/out.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CSVManager/out.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RainCheck/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/RainCheck/results.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RainCheck_version2/result.json" beforeDir="false" afterPath="$PROJECT_DIR$/RainCheck_version2/result.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,27 +55,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Manager.executor": "Run",
-    "Python.bazaszkolna.executor": "Run",
-    "Python.gra.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.proba.executor": "Run",
-    "Python.runner.executor": "Run",
-    "Python.schooldatabase.executor": "Run",
-    "Python.systemksiegowy.executor": "Run",
-    "Python.utils.executor": "Run",
-    "Python.ładowarkapaczki.executor": "Run",
-    "Python.Życzenia_urodzinowe.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/autozbior"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Manager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bazaszkolna.executor&quot;: &quot;Run&quot;,
+    &quot;Python.file_handler.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gra.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.proba.executor&quot;: &quot;Run&quot;,
+    &quot;Python.runner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.schooldatabase.executor&quot;: &quot;Run&quot;,
+    &quot;Python.systemksiegowy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ładowarkapaczki.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Życzenia_urodzinowe.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/CSVManager_v2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\CSVManager_v2" />
+      <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\" />
       <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\autozbior" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -114,86 +129,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728035398330</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Stworzenie programu">
-      <option name="closed" value="true" />
-      <created>1728049475691</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1728049475691</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Stworzenie programu">
-      <option name="closed" value="true" />
-      <created>1728050148392</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1728050148392</updated>
-    </task>
-    <task id="LOCAL-00003" summary="usuniecie wywolania podwójnego int(rok)">
-      <option name="closed" value="true" />
-      <created>1728050920017</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1728050920017</updated>
-    </task>
-    <task id="LOCAL-00004" summary="usuniecie wywolania podwójnego int(rok)">
-      <option name="closed" value="true" />
-      <created>1728050931433</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1728050931433</updated>
-    </task>
-    <task id="LOCAL-00005" summary="usuniecie wywolania podwójnego int(rok)">
-      <option name="closed" value="true" />
-      <created>1728051030061</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1728051030061</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Zmiana nazwy pliku z main na Zyczenia_urodzinowe">
-      <option name="closed" value="true" />
-      <created>1728052219594</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1728052219594</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Wizualne poprawienie i formatowanie tekstu oraz poprawienie bledow">
-      <option name="closed" value="true" />
-      <created>1728052518410</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1728052518410</updated>
-    </task>
-    <task id="LOCAL-00008" summary="poprawienie bledow">
-      <option name="closed" value="true" />
-      <created>1728052636999</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1728052636999</updated>
-    </task>
-    <task id="LOCAL-00009" summary="poprawienie bledow">
-      <option name="closed" value="true" />
-      <created>1728053599399</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1728053599399</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Tworzenie podstawowego kodu - pobieranie liczby elementów - dodanie zmiennych">
-      <option name="closed" value="true" />
-      <created>1728406154100</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1728406154100</updated>
     </task>
     <task id="LOCAL-00011" summary="Dodanie Warunkow dotyczących paczki">
       <option name="closed" value="true" />
@@ -491,7 +426,103 @@
       <option name="project" value="LOCAL" />
       <updated>1734294987912</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="poprawa literówek">
+      <option name="closed" value="true" />
+      <created>1734303401539</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1734303401539</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Dodanie 2 wersji - dodanie mozliwosci wpisania kilku miast">
+      <option name="closed" value="true" />
+      <created>1735653037769</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1735653037769</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Dodanie 2 wersji - dodanie mozliwosci wpisania kilku miast">
+      <option name="closed" value="true" />
+      <created>1735653194344</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1735653194345</updated>
+    </task>
+    <task id="LOCAL-00051" summary="dodanie mozliwosci dodania kilku dat">
+      <option name="closed" value="true" />
+      <created>1735654755607</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1735654755607</updated>
+    </task>
+    <task id="LOCAL-00052" summary="sprawdzenie działania + umozliwienie dodawania kilku dat">
+      <option name="closed" value="true" />
+      <created>1735659459319</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1735659459320</updated>
+    </task>
+    <task id="LOCAL-00053" summary="poprawienie funkcjonalnosci - dopisywanie dat do miejscowosci. w jednej miejscowosci mozemy miec wiele dac z forecastem pogodowym">
+      <option name="closed" value="true" />
+      <created>1735667485651</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1735667485651</updated>
+    </task>
+    <task id="LOCAL-00054" summary="reformat kodu">
+      <option name="closed" value="true" />
+      <created>1735667614098</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1735667614098</updated>
+    </task>
+    <task id="LOCAL-00055" summary="reformat kodu dodanie funkcji magicznej __setitem__">
+      <option name="closed" value="true" />
+      <created>1735669115548</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1735669115548</updated>
+    </task>
+    <task id="LOCAL-00056" summary="plik json">
+      <option name="closed" value="true" />
+      <created>1735669160622</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1735669160622</updated>
+    </task>
+    <task id="LOCAL-00057" summary="poprawienie iterowania po city,date. Dodanie metody items zwracajacej generator tupli">
+      <option name="closed" value="true" />
+      <created>1735727999220</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1735727999221</updated>
+    </task>
+    <task id="LOCAL-00058" summary="requirements.txt">
+      <option name="closed" value="true" />
+      <created>1735728046851</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1735728046851</updated>
+    </task>
+    <task id="LOCAL-00059" summary="plik json">
+      <option name="closed" value="true" />
+      <created>1735728079074</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1735728079074</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -506,16 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Wyswietlanie danych(Suma wag oraz suma pustych kilogramow, zaokraglenie 4 miejsca po przecinku)" />
-    <MESSAGE value="dodanie wysylania ostatniej paczki&#10;dodanie funkcji obliczajacej numer paczki która ma najwiecej pustych kg i ile tych pustych kg jest." />
-    <MESSAGE value="stworzenie klasy bazyszkoly oraz menu startowe uzytkownika" />
-    <MESSAGE value="stworzenie klas podstawowych oraz menu" />
-    <MESSAGE value="dodanie mozliwosci tworzenia użytkowników (uczen,nauczyciel,wychowawca)" />
-    <MESSAGE value="dodawanie klas - sprawdzanie uczniow po klasach." />
-    <MESSAGE value="zarządzanie uczniem - wyswietlanie lekcji po wczesniejszym dodaniu nauczyciela z danym przedmiotem i klasą" />
-    <MESSAGE value="wyswietlanie klasy przy zarzadzaniu uczeniem" />
-    <MESSAGE value="dodanie zarządzania nauczycielem - klasy które uczy + przedmiotu" />
-    <MESSAGE value="dodanie zarzadzanie klasa - poprawiona wersja + dodanie zarzadzanie wychowawca i poprawiono spójnosc kodu" />
     <MESSAGE value="usuniecie komentarzy" />
     <MESSAGE value="uzycie black . do reformatowania kodu" />
     <MESSAGE value="dodanie funkcjonalnosci zapisu oraz odczytu danych z pliku" />
@@ -531,6 +552,27 @@
     <MESSAGE value="dodanie file_handler do zapisu i odczytu plikow" />
     <MESSAGE value="Dodanie geopy - program sam wyszukuje współrzedne - modyfikacja kodu" />
     <MESSAGE value="dodanie requirements.txt - refactor kodu" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie requirements.txt - refactor kodu" />
+    <MESSAGE value="poprawa literówek" />
+    <MESSAGE value="Dodanie 2 wersji - dodanie mozliwosci wpisania kilku miast" />
+    <MESSAGE value="dodanie mozliwosci dodania kilku dat" />
+    <MESSAGE value="sprawdzenie działania + umozliwienie dodawania kilku dat" />
+    <MESSAGE value="poprawienie funkcjonalnosci - dopisywanie dat do miejscowosci. w jednej miejscowosci mozemy miec wiele dac z forecastem pogodowym" />
+    <MESSAGE value="reformat kodu" />
+    <MESSAGE value="reformat kodu dodanie funkcji magicznej __setitem__" />
+    <MESSAGE value="poprawienie iterowania po city,date. Dodanie metody items zwracajacej generator tupli" />
+    <MESSAGE value="requirements.txt" />
+    <MESSAGE value="plik json" />
+    <option name="LAST_COMMIT_MESSAGE" value="plik json" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
