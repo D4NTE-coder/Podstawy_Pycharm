@@ -21,3 +21,46 @@ class Manager:
         if self.saldo + amount <0:
             print(f"Brak środków na koncie.")
             self.history.append("Próba odjęcia zbyt dużej kwoty")
+        else:
+            self.saldo += amount
+            self.history.append(f"Zmiana saldo o {amount}")
+
+    def sell_car(self, brand, model, year):
+        for car in self.autozbior:
+            if car["marka"] == brand and car ["model"] == model and car ["rok"] == year:
+                if car ["ilość_dostępnych_sztuk"] > 0:
+                    car ["ilość_dostępnych_sztuk"] -= 1
+                    self.saldo += car["cena"]
+                    self.history.append(f"Sprzedano {brand} {model} {year}")
+                    print(f"Sprzedano {brand} {model} {year}")
+                    return
+        print("Samochód niedostepny")
+
+    def add_car(self, car_info):
+        self.autozbior.append(car_info)
+        self.saldo -= car_info["cena"] * car_info["ilość_sztuk"]
+        self.history.append(f"Dodano pojazd {car_info['marka']} {car_info}['model'] {car_info['rok']}")
+
+    def display_balance(self):
+        print(f"Saldo wynosi{self.saldo}")
+
+    def list_cars(self):
+        for car in self.autozbior:
+            print(car)
+
+    def availability_car(self, brand, model, year):
+        for car in self.autozbior:
+            if car ["marka"] == brand and car["model"] == model and car["rok"] == year:
+                print(car)
+                return
+        print("Samochód niedostępny")
+
+    def history_review(self):
+        for entry in self.history:
+            print (entry)
+
+    def save_data(self):
+        self.file_handler.save_data_to_data_file(self.saldo, self.autozbior)
+        self.file_handler.save_data_to_history_file(self.history)
+
+manager = Manager("dane_salonu.json", "historia.json")
