@@ -1,12 +1,1 @@
-{
-    "saldo": 1809000.0,
-    "autozbior": [
-        {
-            "marka": "Audi",
-            "model": "A7",
-            "rok": 2014,
-            "cena": 64000.0,
-            "ilość_sztuk": 2
-        }
-    ]
-}
+{"saldo": 1809000.0, "autozbior": [{"marka": "Audi", "model": "A7", "rok": 2014, "cena": 64000.0, "ilo\u0139\u203a\u00c4\u2021_sztuk": 2}, {"marka": "Audi", "model": "A5", "rok": 2015, "cena": 25000.0, "ilo\u015b\u0107_sztuk": 1}]}
