@@ -33,24 +33,20 @@ class Manager:
                 found_car = car
                 car_index = index
                 break
-
         if found_car is None:
             print("Samochód niedostępny")
             return
-
         if "ilość_sztuk" not in found_car:
             print(f"Błąd: Samochód {brand} {model} {year} nie ma klucza 'ilość_sztuk'.")
             return
         if "cena" not in found_car:
             print(f"Błąd: Samochód {brand} {model} {year} nie ma klucza 'cena'.")
             return
-
         if found_car["ilość_sztuk"] > 0:
             found_car["ilość_sztuk"] -= 1
             self.saldo += found_car["cena"]
             self.history.append(f"Sprzedano {brand} {model} {year}")
             print(f"Sprzedano {brand} {model} {year} za {found_car['cena']} zł")
-
             if found_car["ilość_sztuk"] == 0:
                 del self.autozbior[car_index]
                 print(f"{brand} {model} {year} został usunięty z autozbioru, ponieważ nie ma już dostępnych sztuk.")
