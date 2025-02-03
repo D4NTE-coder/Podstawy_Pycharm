@@ -1,6 +1,4 @@
 from file_hander import FileHandler
-from colorama import Fore, Style, init
-
 
 class Manager:
     def __init__(self, data_file, history_file):
@@ -10,7 +8,6 @@ class Manager:
         self.saldo = self.data.get("saldo", 0)
         self.autozbior = self.data.get("autozbior", [])
         self.commands = {}
-        init(autoreset=True)
 
     def assign(self, command, function):
         self.commands[command] = function
@@ -29,20 +26,46 @@ class Manager:
             self.history.append(f"Zmiana salda o {amount}")
 
     def sell_car(self, brand, model, year):
-        for car in self.autozbior:
-            if car["marka"] == brand and car["model"] == model and car["rok"] == year:
-                if car["ilość_dostepnych_sztuk"] > 0:
-                    car["ilość_dostepnych_sztuk"] -= 1
-                    self.saldo += car["cena"]
-                    self.history.append(f"Sprzedano {brand} {model} {year}")
-                    print(f"Sprzedano {brand} {model} {year}")
-                    return
-        print("Samochód niedostępny")
+        found_car = None
+        car_index = -1
+        for index, car in enumerate(self.autozbior):
+            if car.get("marka") == brand and car.get("model") == model and car.get("rok") == year:
+                found_car = car
+                car_index = index
+                break
+
+        if found_car is None:
+            print("Samochód niedostępny")
+            return
+
+        if "ilość_sztuk" not in found_car:
+            print(f"Błąd: Samochód {brand} {model} {year} nie ma klucza 'ilość_sztuk'.")
+            return
+        if "cena" not in found_car:
+            print(f"Błąd: Samochód {brand} {model} {year} nie ma klucza 'cena'.")
+            return
+
+        if found_car["ilość_sztuk"] > 0:
+            found_car["ilość_sztuk"] -= 1
+            self.saldo += found_car["cena"]
+            self.history.append(f"Sprzedano {brand} {model} {year}")
+            print(f"Sprzedano {brand} {model} {year} za {found_car['cena']} zł")
+
+            if found_car["ilość_sztuk"] == 0:
+                del self.autozbior[car_index]
+                print(f"{brand} {model} {year} został usunięty z autozbioru, ponieważ nie ma już dostępnych sztuk.")
+            self.save_data()
+        else:
+            print(f"Brak dostępnych sztuk {brand} {model} {year}")
 
     def add_car(self, car_info):
+        for car in self.autozbior:
+            if car["marka"] == car_info["marka"] and car["model"] == car_info["model"] and car["rok"] == car_info["rok"] and car["cena"] == car_info["cena"]:
+                car["ilość_sztuk"] += car_info["ilość_sztuk"]
+                print(f"Zaktualizowano ilość sztuk {car_info['marka']} {car_info['model']} {car_info['rok']}. Nowa ilość: {car['ilość_sztuk']}")
+                return
         self.autozbior.append(car_info)
-        self.saldo -= car_info["cena"] * car_info["ilość_sztuk"]
-        self.history.append(f"Dodano pojazd {car_info['marka']} {car_info['model']} {car_info['rok']}")
+        print(f"Dodano pojazd {car_info['marka']} {car_info['model']} {car_info['rok']}")
 
     def display_balance(self):
         print(f"Saldo: {self.saldo}")
