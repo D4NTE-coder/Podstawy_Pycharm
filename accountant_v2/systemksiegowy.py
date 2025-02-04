@@ -12,7 +12,15 @@ manager.assign("7", manager.review_history)
 
 while True:
     wybor = input(
-        "Wybierz funkcję programu\n1. Zmiana salda firmy\n2. Sprzedaż samochodu\n3. Dodanie samochodu\n4. Wyświetl saldo\n5. Lista pojazdów\n6. Sprawdź dostępność\n7. Historia działań\n8. Koniec\nWybór: ")
+        "Wybierz funkcję programu\n"
+        "1. Zmiana salda firmy\n"
+        "2. Sprzedaż samochodu\n"
+        "3. Dodanie samochodu\n"
+        "4. Wyświetl saldo\n"
+        "5. Lista pojazdów\n"
+        "6. Sprawdź dostępność\n"
+        "7. Historia działań\n"
+        "8. Koniec\nWybór: ")
 
     if wybor == "1":
         kwota = float(input("Podaj kwotę: "))
