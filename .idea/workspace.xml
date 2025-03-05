@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="poprawa pliku glownego">
-      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/recommendation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Podstawy_Pycharm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Podstawy_Pycharm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="bazowe pliki aplikacji do weryfikacji!">
+      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/templates/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_recommendation/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_recommendation/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_recommendation/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_recommendation/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_recommendation/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_recommendation/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -50,26 +49,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Manager.executor&quot;: &quot;Run&quot;,
-    &quot;Python.bazaszkolna.executor&quot;: &quot;Run&quot;,
-    &quot;Python.file_handler.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gra.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.proba.executor&quot;: &quot;Run&quot;,
-    &quot;Python.runner.executor&quot;: &quot;Run&quot;,
-    &quot;Python.schooldatabase.executor&quot;: &quot;Run&quot;,
-    &quot;Python.systemksiegowy.executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ładowarkapaczki.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Życzenia_urodzinowe.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/CSVManager_v2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.Manager.executor": "Run",
+    "Python.app.executor": "Run",
+    "Python.bazaszkolna.executor": "Run",
+    "Python.file_handler.executor": "Run",
+    "Python.gra.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.proba.executor": "Run",
+    "Python.runner.executor": "Run",
+    "Python.schooldatabase.executor": "Run",
+    "Python.systemksiegowy.executor": "Run",
+    "Python.utils.executor": "Run",
+    "Python.ładowarkapaczki.executor": "Run",
+    "Python.Życzenia_urodzinowe.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/CSVManager_v2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\CSVManager_v2" />
@@ -124,30 +125,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728035398330</updated>
-    </task>
-    <task id="LOCAL-00012" summary="poprawienie warunków ( przedział paczki)">
-      <option name="closed" value="true" />
-      <created>1728409222521</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1728409222521</updated>
-    </task>
-    <task id="LOCAL-00013" summary="poprawienie warunków (sprawdzenia czy element miesci sie w paczce oraz rozpoczynania nowej paczki">
-      <option name="closed" value="true" />
-      <created>1728409415123</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1728409415123</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Wyswietlanie danych poczatkowe (sprawdzenie)">
-      <option name="closed" value="true" />
-      <created>1728410223060</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1728410223061</updated>
     </task>
     <task id="LOCAL-00015" summary="Wyswietlanie danych(Suma wag oraz suma pustych kilogramow, zaokraglenie 4 miejsca po przecinku)">
       <option name="closed" value="true" />
@@ -517,7 +494,31 @@
       <option name="project" value="LOCAL" />
       <updated>1738679869089</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="bazowe pliki aplikacji do weryfikacji!">
+      <option name="closed" value="true" />
+      <created>1741179486207</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1741179486207</updated>
+    </task>
+    <task id="LOCAL-00062" summary="bazowe pliki aplikacji do weryfikacji!">
+      <option name="closed" value="true" />
+      <created>1741179668449</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1741179668449</updated>
+    </task>
+    <task id="LOCAL-00063" summary="bazowe pliki aplikacji do weryfikacji!">
+      <option name="closed" value="true" />
+      <created>1741179712239</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1741179712239</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -532,7 +533,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="uzycie black . do reformatowania kodu" />
     <MESSAGE value="dodanie funkcjonalnosci zapisu oraz odczytu danych z pliku" />
     <MESSAGE value="dodanie pliku requirements.txt + zapisywanie danych przy awaryjnym wylaczaniu programu" />
     <MESSAGE value="dodanie poprawnosci sprzedarzy oraz nie dublowania sie samochodów" />
@@ -557,7 +557,8 @@
     <MESSAGE value="requirements.txt" />
     <MESSAGE value="plik json" />
     <MESSAGE value="poprawa pliku glownego" />
-    <option name="LAST_COMMIT_MESSAGE" value="poprawa pliku glownego" />
+    <MESSAGE value="bazowe pliki aplikacji do weryfikacji!" />
+    <option name="LAST_COMMIT_MESSAGE" value="bazowe pliki aplikacji do weryfikacji!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

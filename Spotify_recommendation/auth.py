@@ -1,5 +1,5 @@
 import spotipy
-from flask import redirect, sessions, requests
+from flask import redirect, sessions, request
 from spotipy.oauth2 import SpotifyOAuth
 import config
 
