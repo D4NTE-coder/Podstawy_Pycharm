@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="plik json">
-      <change afterPath="$PROJECT_DIR$/CSVManager_v2/Manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSVManager_v2/file_handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSVManager_v2/in.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSVManager_v2/in.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSVManager_v2/in.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSVManager_v2/out.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSVManager_v2/out.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSVManager_v2/out.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSVManager_v2/requirements.txt" afterDir="false" />
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="poprawa pliku glownego">
+      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/recommendation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Podstawy_Pycharm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Podstawy_Pycharm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSVManager/out.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CSVManager/out.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RainCheck/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/RainCheck/results.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RainCheck_version2/result.json" beforeDir="false" afterPath="$PROJECT_DIR$/RainCheck_version2/result.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +38,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/D4NTE-coder/Podstawy_Pycharm.git&quot;,
-    &quot;accountId&quot;: &quot;8c1ed1be-7c91-43ab-a99e-d1d2156fd48d&quot;
+    &quot;accountId&quot;: &quot;58aa5bc2-5cbe-4524-a48d-bc0000248158&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -117,7 +112,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-884f5ed5d46b-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.22855.92" />
+        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
       </set>
     </attachedChunks>
   </component>
@@ -129,14 +124,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728035398330</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Dodanie Warunkow dotyczących paczki">
-      <option name="closed" value="true" />
-      <created>1728408555991</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1728408555991</updated>
     </task>
     <task id="LOCAL-00012" summary="poprawienie warunków ( przedział paczki)">
       <option name="closed" value="true" />
@@ -522,7 +509,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735728079074</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="poprawa pliku glownego">
+      <option name="closed" value="true" />
+      <created>1738679869089</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1738679869089</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -537,7 +532,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="usuniecie komentarzy" />
     <MESSAGE value="uzycie black . do reformatowania kodu" />
     <MESSAGE value="dodanie funkcjonalnosci zapisu oraz odczytu danych z pliku" />
     <MESSAGE value="dodanie pliku requirements.txt + zapisywanie danych przy awaryjnym wylaczaniu programu" />
@@ -562,7 +556,8 @@
     <MESSAGE value="poprawienie iterowania po city,date. Dodanie metody items zwracajacej generator tupli" />
     <MESSAGE value="requirements.txt" />
     <MESSAGE value="plik json" />
-    <option name="LAST_COMMIT_MESSAGE" value="plik json" />
+    <MESSAGE value="poprawa pliku glownego" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawa pliku glownego" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
