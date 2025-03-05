@@ -1,28 +1,48 @@
 import spotipy
-from flask import  sessions,jsonify
-from werkzeug.exceptions import Unauthorized
-
+from spotipy.oauth2 import SpotifyOAuth
 from auth import get_spotify_client
 
+
+def get_top_genres(sp):
+    """ Pobiera najczęściej słuchane gatunki użytkownika """
+    try:
+        top_artists = sp.current_user_top_artists(limit=10, time_range='medium_term')  # Ostatnie 6 miesięcy
+        genres = []
+        for artist in top_artists["items"]:
+            genres.extend(artist["genres"])
+
+        unique_genres = list(set(genres))  # Usuwamy duplikaty
+
+        return unique_genres[:5]  # Maksymalnie 5 gatunków
+    except Exception as e:
+        print(f"Błąd pobierania gatunków: {e}")
+        return []
+
+
 def get_recommendations():
-    """Pobiera ulubione gatunki użytkownia i generuje rekomendacje."""
+    """ Pobiera rekomendacje na podstawie ulubionych gatunków """
     sp = get_spotify_client()
-    if not sp:
-        return jsonify({"error": "Unauthorized"}), 401
 
-    top_artists = sp.current_user_top_artists(limit=5, time_range="medium_term")
+    # Pobieramy gatunki użytkownika
+    top_genres = get_top_genres(sp)
 
-    genres= []
-    for artist in top_artists["items"]:
-        genres.extend(artist["genres"])
+    if not top_genres:  # Jeśli nie znaleziono gatunków, ustawiamy domyślne
+        top_genres = ["pop", "rock", "hip-hop"]
 
-    popular_genres = list(set(genres))[:3]
+    try:
+        recommendations = sp.recommendations(seed_genres=top_genres[:2], limit=10)
 
-    recommendations = sp.recommendations(seed_genres=popular_genres, limit=10)
-    recommended_tracks = [
-        {"name": track["name"],"artist": track["artists"][0]["name"]}
-        for track in recommendations["tracks"]
-
-    ]
-
-    return jsonify({"top_genres": popular_genres, "recommended_tracks": recommended_tracks})
+        return {
+            "top_genres": top_genres,
+            "recommended_tracks": [
+                {
+                    "name": track["name"],
+                    "artist": track["artists"][0]["name"],
+                    "preview_url": track["preview_url"]  # Link do podglądu piosenki
+                }
+                for track in recommendations["tracks"]
+            ]
+        }
+    except Exception as e:
+        print(f"Błąd pobierania rekomendacji: {e}")
+        return {"error": "Nie udało się pobrać rekomendacji."}
