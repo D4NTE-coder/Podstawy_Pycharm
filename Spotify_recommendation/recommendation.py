@@ -26,3 +26,4 @@ def get_recommendations():
     ]
 
     return jsonify({"top_genres": popular_genres, "recommended_tracks": recommended_tracks})
+sad
