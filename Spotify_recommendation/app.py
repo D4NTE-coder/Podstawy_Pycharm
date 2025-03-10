@@ -23,7 +23,7 @@ def recommend():
     data = recommendation.get_recommendations()
     if data is None:
         return render_template("error.html", message="Błąd podczas pobierania rekomendacji")
-    return render_template("recommendations.html", data=data)
+    return render_template("concerts.html", data=data)
 
 @app.route("/logout")
 def logout_user():

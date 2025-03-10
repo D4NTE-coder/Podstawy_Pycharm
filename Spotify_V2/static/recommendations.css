@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 20%;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -54,7 +54,7 @@ header h1 {
 .section h2 {
     font-size: 28px;
     font-weight: 600;
-    color: #1db954;
+    color: #FFFFFF;
     margin-bottom: 20px;
     text-align: center;
 }
