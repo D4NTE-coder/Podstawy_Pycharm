@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="poczatkowa wersja">
-      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/templates/recommendations.html" afterDir="false" />
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Wersja ktora dziala lecz nie pobiera danych">
+      <change afterPath="$PROJECT_DIR$/Spotify_recommendation/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_recommendation/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_recommendation/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_recommendation/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_recommendation/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_recommendation/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_recommendation/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_recommendation/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_recommendation/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_recommendation/recommendation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_recommendation/recommendation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_recommendation/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_recommendation/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_recommendation/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_recommendation/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_recommendation/templates/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_recommendation/templates/recommendations.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_recommendation/templates/recommendations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -53,29 +53,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.Manager.executor": "Run",
-    "Python.app.executor": "Run",
-    "Python.bazaszkolna.executor": "Run",
-    "Python.config.executor": "Run",
-    "Python.file_handler.executor": "Run",
-    "Python.gra.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.proba.executor": "Run",
-    "Python.runner.executor": "Run",
-    "Python.schooldatabase.executor": "Run",
-    "Python.systemksiegowy.executor": "Run",
-    "Python.utils.executor": "Run",
-    "Python.ładowarkapaczki.executor": "Run",
-    "Python.Życzenia_urodzinowe.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/CSVManager_v2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.Manager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bazaszkolna.executor&quot;: &quot;Run&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.file_handler.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gra.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.proba.executor&quot;: &quot;Run&quot;,
+    &quot;Python.runner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.schooldatabase.executor&quot;: &quot;Run&quot;,
+    &quot;Python.systemksiegowy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ładowarkapaczki.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Życzenia_urodzinowe.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/CSVManager_v2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\CSVManager_v2" />
@@ -86,7 +86,7 @@
       <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\CSVManager" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.app">
+  <component name="RunManager">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Podstawy_Pycharm" />
       <option name="ENV_FILES" value="" />
@@ -153,14 +153,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728035398330</updated>
-    </task>
-    <task id="LOCAL-00016" summary="dodanie wysylania ostatniej paczki&#10;dodanie funkcji obliczajacej numer paczki która ma najwiecej pustych kg i ile tych pustych kg jest.">
-      <option name="closed" value="true" />
-      <created>1728746319465</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1728746319465</updated>
     </task>
     <task id="LOCAL-00017" summary="stworzenie klasy bazyszkoly oraz menu startowe uzytkownika">
       <option name="closed" value="true" />
@@ -546,7 +538,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741181461915</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Wersja ktora dziala lecz nie pobiera danych">
+      <option name="closed" value="true" />
+      <created>1741190041433</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1741190041433</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -561,7 +561,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dodanie pliku requirements.txt + zapisywanie danych przy awaryjnym wylaczaniu programu" />
     <MESSAGE value="dodanie poprawnosci sprzedarzy oraz nie dublowania sie samochodów" />
     <MESSAGE value="reformatowanie tekstu" />
     <MESSAGE value="biblioteki" />
@@ -586,7 +585,8 @@
     <MESSAGE value="poprawa pliku glownego" />
     <MESSAGE value="bazowe pliki aplikacji do weryfikacji!" />
     <MESSAGE value="poczatkowa wersja" />
-    <option name="LAST_COMMIT_MESSAGE" value="poczatkowa wersja" />
+    <MESSAGE value="Wersja ktora dziala lecz nie pobiera danych" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wersja ktora dziala lecz nie pobiera danych" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

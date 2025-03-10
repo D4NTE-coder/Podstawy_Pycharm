@@ -1,11 +1,10 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv()  # Ładowanie zmiennych środowiskowych z pliku .env
 
-CLIENT_ID = os.getenv("SPOTIPY_CLIENT_ID", "twoje_client_ID")
-CLIENT_SECRET = os.getenv("SPOTIPY_CLIENT_SECRET", "twoje_secret_ID")
-REDIRECT_URI = os.getenv("SPOTIPY_REDIRECT_URI", "http://localhost:5000/callback")
-
-SCOPE = "user-top-read playlist-modify-public"
-SECRET_KEY = "klucz"
+class Config:
+    SPOTIPY_CLIENT_ID = os.getenv("SPOTIPY_CLIENT_ID")
+    SPOTIPY_CLIENT_SECRET = os.getenv("SPOTIPY_CLIENT_SECRET")
+    SPOTIPY_REDIRECT_URI = os.getenv("SPOTIPY_REDIRECT_URI")
+    SECRET_KEY = os.getenv("SECRET_KEY")
