@@ -9,6 +9,30 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='recommendations.css') }}">
 </head>
+
+<script>
+    function fetchCurrentlyPlaying() {
+        fetch('/currently_playing')
+            .then(response => response.json())
+            .then(data => {
+                let container = document.getElementById("now-playing-container");
+                if (data.error) {
+                    container.innerHTML = `<p>${data.error}</p>`;
+                } else {
+                    container.innerHTML = `
+                        <img src="${data.image}" alt="${data.name}" class="track-img" style="max-width: 150px; border-radius: 10px;">
+                        <h3>${data.name}</h3>
+                        <p>${data.artist}</p>
+                        <p><strong>Album:</strong> ${data.album}</p>
+                    `;
+                }
+            })
+            .catch(error => console.error("Błąd pobierania danych:", error));
+    }
+
+    setInterval(fetchCurrentlyPlaying, 5000); // Odświeżaj co 5 sekund
+    fetchCurrentlyPlaying();
+</script>
 <body>
     <div class="container">
         <header>
@@ -46,7 +70,20 @@
                     {% endfor %}
                 </div>
             </section>
-
+<section class="section now-playing">
+    <h2>Teraz odtwarzane</h2>
+    <div id="now-playing-container">
+        <p>Brak danych o odtwarzanym utworze</p>
+    </div>
+    <section class="section">
+<header>
+    <h1>Ostatnio przesłuchane utwory</h1>
+    <a href="{{ url_for('dashboard') }}">
+        <button class="dashboard-btn">Dashboard</button>
+    </a>
+</header>
+</section>
+</section>
             <section class="section">
                 <h2>Twoje Ulubione Piosenki</h2>
                 <div class="grid-container">

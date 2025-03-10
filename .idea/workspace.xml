@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="zmiany graficzne oraz dodawanie albumu">
+      <change beforePath="$PROJECT_DIR$/.idea/Podstawy_Pycharm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Podstawy_Pycharm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_V2/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_V2/.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V2/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_V2/static/recommendations.css" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/static/recommendations.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_V2/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_V2/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_V2/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V2/templates/recommendations.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/templates/recommendations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -35,12 +35,12 @@
     &quot;assignee&quot;: &quot;D4NTE-coder&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/D4NTE-coder/Podstawy_Pycharm.git&quot;,
-    &quot;accountId&quot;: &quot;58aa5bc2-5cbe-4524-a48d-bc0000248158&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/D4NTE-coder/Podstawy_Pycharm.git",
+    "accountId": "8c1ed1be-7c91-43ab-a99e-d1d2156fd48d"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -50,30 +50,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.Manager.executor": "Run",
-    "Python.app.executor": "Run",
-    "Python.auth.executor": "Run",
-    "Python.bazaszkolna.executor": "Run",
-    "Python.config.executor": "Run",
-    "Python.file_handler.executor": "Run",
-    "Python.gra.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.proba.executor": "Run",
-    "Python.runner.executor": "Run",
-    "Python.schooldatabase.executor": "Run",
-    "Python.systemksiegowy.executor": "Run",
-    "Python.utils.executor": "Run",
-    "Python.ładowarkapaczki.executor": "Run",
-    "Python.Życzenia_urodzinowe.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/CSVManager_v2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.Manager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.auth.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bazaszkolna.executor&quot;: &quot;Run&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.file_handler.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gra.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.proba.executor&quot;: &quot;Run&quot;,
+    &quot;Python.runner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.schooldatabase.executor&quot;: &quot;Run&quot;,
+    &quot;Python.systemksiegowy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ładowarkapaczki.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Życzenia_urodzinowe.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Damian/PycharmProjects/Podstawy_Pycharm/CSVManager_v2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\CSVManager_v2" />
@@ -85,7 +85,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Podstawy_Pycharm" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,11 +94,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Spotify_recommendation" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_NAME" value="Python 3.12 (Podstawy_Pycharm)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Spotify_V2" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Spotify_recommendation/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Spotify_V2/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,7 +140,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+        <option value="bundled-python-sdk-884f5ed5d46b-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.22855.92" />
       </set>
     </attachedChunks>
   </component>

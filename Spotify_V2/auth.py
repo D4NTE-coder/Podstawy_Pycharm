@@ -25,7 +25,7 @@ def login():
     sp_oauth = SpotifyOAuth(client_id=current_app.config["SPOTIPY_CLIENT_ID"],
                              client_secret=current_app.config["SPOTIPY_CLIENT_SECRET"],
                              redirect_uri=current_app.config["SPOTIPY_REDIRECT_URI"],
-                             scope="user-top-read user-library-read playlist-modify-public playlist-modify-private")
+                             scope="user-top-read user-library-read playlist-modify-public playlist-modify-private user-read-currently-playing user-read-playback-state user-read-recently-played")
     auth_url = sp_oauth.get_authorize_url()
     return redirect(auth_url)
 
@@ -36,7 +36,7 @@ def callback():
     sp_oauth = SpotifyOAuth(client_id=current_app.config["SPOTIPY_CLIENT_ID"],
                              client_secret=current_app.config["SPOTIPY_CLIENT_SECRET"],
                              redirect_uri=current_app.config["SPOTIPY_REDIRECT_URI"],
-                             scope="user-top-read user-library-read playlist-modify-public playlist-modify-private")
+                             scope="user-top-read user-library-read playlist-modify-public playlist-modify-private user-read-currently-playing user-read-playback-state user-read-recently-played")
     token_info = sp_oauth.get_access_token(request.args['code'])
     session['token_info'] = token_info
     return redirect('/recommend')
