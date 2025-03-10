@@ -49,6 +49,9 @@ def recommend():
 def logout_user():
     return logout()
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/create_playlist', methods=['POST'])
 def create_playlist_route():
