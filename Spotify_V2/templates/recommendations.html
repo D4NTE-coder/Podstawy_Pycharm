@@ -1,0 +1,61 @@
+<!-- templates/recommendations.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Dashboard - Recommendations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='recommendations.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Spotify Data</h1>
+            <a href="{{ url_for('logout_user') }}">
+                <button class="logout-btn">Log out</button>
+            </a>
+        </header>
+
+        <div class="content">
+            <section class="section">
+                <h2>Your Top Artists</h2>
+                <div class="grid-container">
+                    {% for artist in top_artists %}
+                    <div class="grid-item">
+                        <img src="{{ artist['images'][0]['url'] }}" alt="{{ artist['name'] }}" class="artist-img">
+                        <h3>{{ artist['name'] }}</h3>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Your Top Albums</h2>
+                <div class="grid-container">
+                    {% for album in top_albums %}
+                    <div class="grid-item">
+                        <img src="{{ album['images'][0]['url'] }}" alt="{{ album['name'] }}" class="album-img">
+                        <h3>{{ album['name'] }}</h3>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Your Top Tracks</h2>
+                <div class="grid-container">
+                    {% for track in top_tracks %}
+                    <div class="grid-item">
+                        <img src="{{ track['album']['images'][0]['url'] }}" alt="{{ track['name'] }}" class="track-img">
+                        <h3>{{ track['name'] }}</h3>
+                        <p>{{ track['artists'][0]['name'] }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

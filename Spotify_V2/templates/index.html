@@ -1,0 +1,22 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Welcome to Your Spotify Dashboard</h1>
+            <p class="description">Please log in to access your Spotify data and explore your top artists, albums, and songs.</p>
+            <a href="{{ url_for('login_user') }}">
+                <button class="login-btn">Log in with Spotify</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

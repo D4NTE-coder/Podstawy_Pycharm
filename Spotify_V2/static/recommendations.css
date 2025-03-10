@@ -1,0 +1,92 @@
+/* static/recommendations.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #282828;
+    color: #fff;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.logout-btn {
+    background-color: #e60000;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #d50000;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1db954;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.artist-img, .album-img, .track-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.grid-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.grid-item p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #aaa;
+}
