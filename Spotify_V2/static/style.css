@@ -51,11 +51,34 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
+.playlist-btn {
+    background: linear-gradient(135deg, #dce2e6, #1e40d7);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.playlist-btn:hover {
+    background: linear-gradient(135deg, #04197a, #04197a);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+
 .dashboard-btn:hover {
     background: linear-gradient(135deg, #17a046, #1aa34f);
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
+
 
 /* Styl dla kontenera Dashboardu */
 .dashboard-container {
