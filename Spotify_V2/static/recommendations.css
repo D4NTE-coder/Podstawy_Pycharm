@@ -110,3 +110,23 @@ header h1 {
     font-size: 18px;
     font-weight: 600;
     margin-top: 10px;
+}
+.spotify-player {
+    display: flex;
+    align-items: center;
+    background-color: #1DB954;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 50%;
+    color: white;
+}
+
+.spotify-player img {
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+#spotify-player h3, #spotify-player p {
+    margin: 0;
+}

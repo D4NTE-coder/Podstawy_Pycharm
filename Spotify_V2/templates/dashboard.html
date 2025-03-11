@@ -6,6 +6,7 @@
     <title>Dashboard - Ostatnio Słuchane</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
 </head>
 <body>
     <div class="dashboard-container">
@@ -15,68 +16,6 @@
                 <button class="back-btn">Powrót</button>
             </a>
         </header>
-        <script>
-    let player;
-
-    window.onSpotifyWebPlaybackSDKReady = () => {
-        const token = "{{ session['token_info']['access_token'] }}";  // Pobranie tokena sesji
-        player = new Spotify.Player({
-            name: 'Web Music Player',
-            getOAuthToken: cb => { cb(token); },
-            volume: 0.5
-        });
-
-        // Połączenie z playerem
-        player.addListener('ready', ({ device_id }) => {
-            console.log('Gotowy do odtwarzania na urządzeniu', device_id);
-            fetch(`https://api.spotify.com/v1/me/player`, {
-                method: "PUT",
-                body: JSON.stringify({ device_ids: [device_id], play: true }),
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${token}`
-                }
-            });
-        });
-
-        player.addListener('not_ready', ({ device_id }) => {
-            console.log('Player nie jest gotowy:', device_id);
-        });
-
-        player.connect();
-    };
-
-    // Obsługa przycisków sterowania
-    document.getElementById('play-btn').addEventListener('click', function() {
-        player.resume().then(() => {
-            console.log('Odtwarzanie wznowione');
-        }).catch(error => console.log(error));
-    });
-
-    document.getElementById('pause-btn').addEventListener('click', function() {
-        player.pause().then(() => {
-            console.log('Muzyka zatrzymana');
-        }).catch(error => console.log(error));
-    });
-
-    document.getElementById('next-btn').addEventListener('click', function() {
-        player.nextTrack().then(() => {
-            console.log('Następny utwór');
-        }).catch(error => console.log(error));
-    });
-
-    document.getElementById('prev-btn').addEventListener('click', function() {
-        player.previousTrack().then(() => {
-            console.log('Poprzedni utwór');
-        }).catch(error => console.log(error));
-    });
-</script>
-<div class="music-player">
-    <button id="prev-btn">⏮️</button>
-    <button id="play-btn">▶️</button>
-    <button id="pause-btn">⏸️</button>
-    <button id="next-btn">⏭️</button>
-</div>
         <div class="dashboard-content">
             <section class="dashboard-section">
                 <h2>Twoje ostatnie utwory</h2>

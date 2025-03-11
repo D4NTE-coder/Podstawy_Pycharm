@@ -1,4 +1,3 @@
-<!-- templates/recommendations.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,31 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='recommendations.css') }}">
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
 </head>
-
-<script>
-    function fetchCurrentlyPlaying() {
-        fetch('/currently_playing')
-            .then(response => response.json())
-            .then(data => {
-                let container = document.getElementById("now-playing-container");
-                if (data.error) {
-                    container.innerHTML = `<p>${data.error}</p>`;
-                } else {
-                    container.innerHTML = `
-                        <img src="${data.image}" alt="${data.name}" class="track-img" style="max-width: 150px; border-radius: 10px;">
-                        <h3>${data.name}</h3>
-                        <p>${data.artist}</p>
-                        <p><strong>Album:</strong> ${data.album}</p>
-                    `;
-                }
-            })
-            .catch(error => console.error("Błąd pobierania danych:", error));
-    }
-
-    setInterval(fetchCurrentlyPlaying, 5000); // Odświeżaj co 5 sekund
-    fetchCurrentlyPlaying();
-</script>
 <body>
     <div class="container">
         <header>
@@ -40,15 +16,17 @@
             <a href="{{ url_for('logout_user') }}">
                 <button class="logout-btn">Log out</button>
             </a>
-
         </header>
-<form action="{{ url_for('create_playlist_route') }}" method="POST">
-    <input type="text" name="playlist_name" placeholder="Nazwa playlisty" required>
-    <button type="submit">Utwórz playlistę</button>
-</form>
+
+
+        <form action="{{ url_for('create_playlist_route') }}" method="POST">
+            <input type="text" name="playlist_name" placeholder="Nazwa playlisty" required>
+            <button type="submit">Utwórz playlistę</button>
+        </form>
+
         <div class="content">
             <section class="section">
-                <h2>Twoji Top Artyści</h2>
+                <h2>Twoi Top Artyści</h2>
                 <div class="grid-container">
                     {% for artist in top_artists %}
                     <div class="grid-item">
@@ -70,20 +48,27 @@
                     {% endfor %}
                 </div>
             </section>
-<section class="section now-playing">
-    <h2>Teraz odtwarzane</h2>
-    <div id="now-playing-container">
-        <p>Brak danych o odtwarzanym utworze</p>
-    </div>
-    <section class="section">
-<header>
-    <h1>Ostatnio przesłuchane utwory</h1>
-    <a href="{{ url_for('dashboard') }}">
-        <button class="dashboard-btn">Dashboard</button>
-    </a>
-</header>
-</section>
-</section>
+
+            <section class="section now-playing">
+                <h2>Teraz odtwarzane</h2>
+                <div id="now-playing-container">
+                    <p>Brak danych o odtwarzanym utworze</p>
+                </div>
+                        <div class="music-player">
+            <button id="prev-btn">⏮️</button>
+            <button id="play-btn">▶️</button>
+            <button id="pause-btn">⏸️</button>
+            <button id="next-btn">⏭️</button>
+        </div>
+            </section>
+
+            <section class="section">
+                <h2>Ostatnio przesłuchane utwory</h2>
+                <a href="{{ url_for('dashboard') }}">
+                    <button class="dashboard-btn">Dashboard</button>
+                </a>
+            </section>
+
             <section class="section">
                 <h2>Twoje Ulubione Piosenki</h2>
                 <div class="grid-container">
@@ -98,5 +83,90 @@
             </section>
         </div>
     </div>
+
+    <!-- Skrypty JavaScript -->
+    <script>
+        let player;
+
+        window.onSpotifyWebPlaybackSDKReady = () => {
+            const token = "{{ session['token_info']['access_token'] }}";  // Pobranie tokena sesji
+            player = new Spotify.Player({
+                name: 'Web Music Player',
+                getOAuthToken: cb => { cb(token); },
+                volume: 0.5
+            });
+
+            // Połączenie z playerem
+            player.addListener('ready', ({ device_id }) => {
+                console.log('Gotowy do odtwarzania na urządzeniu', device_id);
+                fetch(`https://api.spotify.com/v1/me/player`, {
+                    method: "PUT",
+                    body: JSON.stringify({ device_ids: [device_id], play: true }),
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+                    }
+                });
+            });
+
+            player.addListener('not_ready', ({ device_id }) => {
+                console.log('Player nie jest gotowy:', device_id);
+            });
+
+            player.connect();
+        };
+
+        // Obsługa przycisków sterowania
+        document.getElementById('play-btn').addEventListener('click', function() {
+            player.resume().then(() => {
+                console.log('Odtwarzanie wznowione');
+            }).catch(error => console.log(error));
+        });
+
+        document.getElementById('pause-btn').addEventListener('click', function() {
+            player.pause().then(() => {
+                console.log('Muzyka zatrzymana');
+            }).catch(error => console.log(error));
+        });
+
+        document.getElementById('next-btn').addEventListener('click', function() {
+            player.nextTrack().then(() => {
+                console.log('Następny utwór');
+            }).catch(error => console.log(error));
+        });
+
+        document.getElementById('prev-btn').addEventListener('click', function() {
+            player.previousTrack().then(() => {
+                console.log('Poprzedni utwór');
+            }).catch(error => console.log(error));
+        });
+    </script>
+
+    <script>
+        function fetchCurrentlyPlaying() {
+            fetch('/currently_playing')
+                .then(response => response.json())
+                .then(data => {
+                    let container = document.getElementById("now-playing-container");
+                    if (data.error) {
+                        container.innerHTML = `<p>${data.error}</p>`;
+                    } else {
+                        container.innerHTML = `
+                            <img src="${data.image}" alt="${data.name}" class="track-img" style="max-width: 150px; border-radius: 10px;">
+                            <h3>${data.name}</h3>
+                            <p>${data.artist}</p>
+                            <p><strong>Album:</strong> ${data.album}</p>
+                        `;
+                    }
+                })
+                .catch(error => console.error("Błąd pobierania danych:", error));
+        }
+
+        setInterval(fetchCurrentlyPlaying, 5000); // Odświeżaj co 5 sekund
+        fetchCurrentlyPlaying();
+    </script>
+
+    <script src="player.js"></script> <!-- Twój plik JavaScript -->
+    <script src="script.js"></script> <!-- Twój plik z powyższym kodem -->
 </body>
 </html>

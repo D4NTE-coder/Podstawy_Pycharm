@@ -154,5 +154,12 @@ def create_playlist_route():
 
     return redirect(url_for('index'))
 
+@app.route('/get_token')
+def get_token():
+    token_info = session.get('token_info', {})
+    if 'access_token' not in token_info:
+        return jsonify({'error': 'Token wygasł, zaloguj się ponownie'}), 401
+    return jsonify({'access_token': token_info['access_token']})
+
 if __name__ == "__main__":
     app.run(debug=True)
