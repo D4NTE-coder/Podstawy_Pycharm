@@ -32,13 +32,13 @@ def recommend():
         return redirect('/login')
 
     # Pobieranie topowych artystów
-    top_artists = sp.current_user_top_artists(limit=5)["items"]
+    top_artists = sp.current_user_top_artists(limit=6)["items"]
 
     # Pobieranie najczęściej słuchanych utworów
-    top_tracks = sp.current_user_top_tracks(limit=5)["items"]
+    top_tracks = sp.current_user_top_tracks(limit=6)["items"]
 
     # Pobieranie albumów użytkownika
-    albums = sp.current_user_saved_albums(limit=5)["items"]
+    albums = sp.current_user_saved_albums(limit=6)["items"]
 
     return render_template("recommendations.html", top_artists=top_artists, top_tracks=top_tracks, albums=albums)
 
@@ -121,7 +121,7 @@ def dashboard():
     sp = spotipy.Spotify(auth=token)
 
     # Pobranie ostatnio odtwarzanych utworów
-    recently_played = sp.current_user_recently_played(limit=10).get('items', [])
+    recently_played = sp.current_user_recently_played(limit=12).get('items', [])
 
     recently_played_tracks = []
     for item in recently_played:
