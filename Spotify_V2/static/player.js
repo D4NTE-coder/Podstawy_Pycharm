@@ -108,6 +108,7 @@ if (playBtn) {
     });
 }
 
+
 // Spotify SDK initialization
 window.onSpotifyWebPlaybackSDKReady = () => {
     // Initialize the player after the SDK is ready

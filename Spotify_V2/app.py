@@ -137,7 +137,7 @@ def dashboard():
     return render_template('dashboard.html', recently_played=recently_played_tracks)
 @app.route('/create_playlist', methods=['POST'])
 def create_playlist_route():
-    """Tworzy playlistę i przekierowuje użytkownika po sukcesie."""
+    """Tworzy playlistę i przekierowuje użytkownika """
     if 'token_info' not in session:
         return redirect(url_for('login'))
 

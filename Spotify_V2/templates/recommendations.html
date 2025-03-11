@@ -60,6 +60,11 @@
             <button id="pause-btn">⏸️</button>
             <button id="next-btn">⏭️</button>
         </div>
+                <div class="music-player">
+  <div id="current-time">00:00</div>
+  <input id="seek-bar" type="range" value="0" max="100" step="0.1" />
+  <div id="duration">03:30</div>
+</div>
             </section>
 
             <section class="section">
@@ -140,6 +145,36 @@
                 console.log('Poprzedni utwór');
             }).catch(error => console.log(error));
         });
+        function updateSeekBar(player) {
+  player.getCurrentState().then(state => {
+    if (!state) return;
+    const currentTime = state.position / 1000;
+    const duration = state.duration / 1000;
+    const seekBar = document.getElementById('seek-bar');
+
+    seekBar.value = (currentTime / duration) * 100; // Procentowy postęp piosenki
+    document.getElementById('current-time').innerText = formatTime(currentTime);
+    document.getElementById('duration').innerText = formatTime(duration);
+  });
+}
+
+// Funkcja do formatowania czasu (sekundy na minuty:sekundy)
+function formatTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const sec = Math.floor(seconds % 60);
+  return `${minutes}:${sec < 10 ? '0' : ''}${sec}`;
+}
+
+// Ustawienie paska przewijania
+document.getElementById('seek-bar').addEventListener('input', (e) => {
+  const value = e.target.value;
+  const player = Spotify.Player; // Pobierz instancję odtwarzacza
+
+  player.seek((value / 100) * player.getCurrentState().duration); // Przewiń do nowej pozycji
+});
+
+// Ustawienie interwału, aby regularnie aktualizować pasek
+setInterval(() => updateSeekBar(player), 1000);
     </script>
 
     <script>
