@@ -14,7 +14,7 @@ body {
     text-align: center;
     background-color: #1db954;
     border-radius: 15px;
-    padding: 40px 30px;
+    padding: 40px 30p00x;
     width: 100%;
     max-width: 600px;
 }
@@ -48,7 +48,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     text-transform: uppercase;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .dashboard-btn:hover {
@@ -186,4 +186,3 @@ body {
     outline: none;
     border: none; /* Dodatkowo usunięcie obramowania, jeśli było */
 }
-
