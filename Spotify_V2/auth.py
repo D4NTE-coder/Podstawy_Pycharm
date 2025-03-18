@@ -1,4 +1,3 @@
-# auth.py
 
 import os
 from flask import redirect, request, session, current_app

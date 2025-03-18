@@ -109,8 +109,8 @@ if (playBtn) {
 }
 
 
-// Spotify SDK initialization
+// inicjalizacja SDK Spotify
 window.onSpotifyWebPlaybackSDKReady = () => {
-    // Initialize the player after the SDK is ready
+
     console.log("Spotify Web Playback SDK is ready!");
 };

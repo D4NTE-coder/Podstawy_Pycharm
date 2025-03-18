@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="dodanie paska przesuwania muzyki">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="poprawa wizualna">
+      <change afterPath="$PROJECT_DIR$/Spotify_V2/.env.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_10_2025_3_27_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_10_2025_3_27_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_V2/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_V2/templates/recommendations.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/templates/recommendations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_V2/.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_V2/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_V2/static/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/static/player.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +35,12 @@
     &quot;assignee&quot;: &quot;D4NTE-coder&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/D4NTE-coder/Podstawy_Pycharm.git",
-    "accountId": "8c1ed1be-7c91-43ab-a99e-d1d2156fd48d"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/D4NTE-coder/Podstawy_Pycharm.git&quot;,
+    &quot;accountId&quot;: &quot;8c1ed1be-7c91-43ab-a99e-d1d2156fd48d&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -148,14 +152,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728035398330</updated>
-    </task>
-    <task id="LOCAL-00025" summary="zarządzanie uczniem - wyswietlanie lekcji po wczesniejszym dodaniu nauczyciela z danym przedmiotem i klasą">
-      <option name="closed" value="true" />
-      <created>1730650807067</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1730650807068</updated>
     </task>
     <task id="LOCAL-00026" summary="wyswietlanie klasy przy zarzadzaniu uczeniem">
       <option name="closed" value="true" />
@@ -541,7 +537,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741734829231</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="poprawa wizualna">
+      <option name="closed" value="true" />
+      <created>1741735966789</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1741735966789</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -556,7 +560,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dodanie file_handler do zapisu i odczytu plikow" />
     <MESSAGE value="Dodanie geopy - program sam wyszukuje współrzedne - modyfikacja kodu" />
     <MESSAGE value="dodanie requirements.txt - refactor kodu" />
     <MESSAGE value="poprawa literówek" />
@@ -581,7 +584,8 @@
     <MESSAGE value="dodanie odtwarzacza" />
     <MESSAGE value="poprawienie wygladu strony" />
     <MESSAGE value="dodanie paska przesuwania muzyki" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie paska przesuwania muzyki" />
+    <MESSAGE value="poprawa wizualna" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawa wizualna" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
