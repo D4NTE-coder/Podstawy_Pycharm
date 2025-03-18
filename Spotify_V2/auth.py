@@ -1,5 +1,4 @@
 
-import os
 from flask import redirect, request, session, current_app
 from spotipy import Spotify
 from spotipy.oauth2 import SpotifyOAuth
@@ -7,9 +6,7 @@ from flask import current_app
 
 # Funkcja do uzyskiwania dostępu do Spotify OAuth
 def get_spotify_client():
-    """
-    Funkcja zwracająca klienta Spotify, jeśli użytkownik jest zalogowany.
-    """
+
     token_info = session.get("token_info")
     if not token_info:
         return None
@@ -18,9 +15,7 @@ def get_spotify_client():
     return sp
 
 def login():
-    """
-    Funkcja przekierowująca użytkownika do strony logowania Spotify.
-    """
+
     sp_oauth = SpotifyOAuth(client_id=current_app.config["SPOTIPY_CLIENT_ID"],
                              client_secret=current_app.config["SPOTIPY_CLIENT_SECRET"],
                              redirect_uri=current_app.config["SPOTIPY_REDIRECT_URI"],
@@ -29,9 +24,7 @@ def login():
     return redirect(auth_url)
 
 def callback():
-    """
-    Funkcja obsługująca callback po autoryzacji użytkownika w Spotify.
-    """
+
     sp_oauth = SpotifyOAuth(client_id=current_app.config["SPOTIPY_CLIENT_ID"],
                              client_secret=current_app.config["SPOTIPY_CLIENT_SECRET"],
                              redirect_uri=current_app.config["SPOTIPY_REDIRECT_URI"],
