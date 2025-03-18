@@ -1,4 +1,3 @@
-
 import os
 
 SPOTIPY_CLIENT_ID = os.getenv("SPOTIPY_CLIENT_ID")
