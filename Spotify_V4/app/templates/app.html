@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify App</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Your Top Tracks</h1>
+
+        {% if top_tracks %}
+            <div class="tracks-grid">
+
+                {% for track in top_tracks %}
+                    <div class="track-card">
+
+                        <img
+                            src="{{ track['album']['images'][0]['url'] }}"
+                            alt="Album Cover"
+                            class="album-cover"
+                        >
+
+                        <h3>{{ track['name'] }}</h3>
+
+                        <p>
+                            {{ track['artists'][0]['name'] }}
+                        </p>
+
+                        <p>
+                            Popularity: {{ track['popularity'] }}
+                        </p>
+
+                        <a
+                            href="{{ track['external_urls']['spotify'] }}"
+                            target="_blank"
+                            class="spotify-btn"
+                        >
+                            Open in Spotify
+                        </a>
+
+                    </div>
+                {% endfor %}
+
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
