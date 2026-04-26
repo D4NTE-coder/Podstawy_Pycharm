@@ -3,50 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify App</title>
+    <title>Spotify Dashboard</title>
     <link rel="stylesheet" href="/static/css/dashboard.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Your Top Tracks</h1>
+<div class="container">
 
-        {% if top_tracks %}
-            <div class="tracks-grid">
+    <header>
+        <h1>Spotify Dashboard</h1>
+    </header>
 
-                {% for track in top_tracks %}
-                    <div class="track-card">
+    <div class="dashboard-layout">
 
-                        <img
-                            src="{{ track['album']['images'][0]['url'] }}"
-                            alt="Album Cover"
-                            class="album-cover"
-                        >
+        <!-- LEFT SIDE - TOP TRACKS -->
+        <section class="top-tracks-section">
+            <h2>Your Top Tracks</h2>
 
-                        <h3>{{ track['name'] }}</h3>
+            {% if top_tracks %}
+                <div class="tracks-grid">
 
-                        <p>
-                            {{ track['artists'][0]['name'] }}
-                        </p>
+                    {% for track in top_tracks %}
+                        <div class="track-card">
 
-                        <p>
-                            Popularity: {{ track['popularity'] }}
-                        </p>
+                            <img
+                                src="{{ track['album']['images'][0]['url'] }}"
+                                alt="Album Cover"
+                                class="album-cover"
+                            >
 
-                        <a
-                            href="{{ track['external_urls']['spotify'] }}"
-                            target="_blank"
-                            class="spotify-btn"
-                        >
-                            Open in Spotify
-                        </a>
+                            <div class="track-info">
+                                <h3>{{ track['name'] }}</h3>
+                                <p>{{ track['artists'][0]['name'] }}</p>
+                                <p>Popularity: {{ track['popularity'] }}</p>
 
-                    </div>
-                {% endfor %}
+                                <a
+                                    href="{{ track['external_urls']['spotify'] }}"
+                                    target="_blank"
+                                    class="spotify-btn"
+                                >
+                                    Open in Spotify
+                                </a>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+
+                </div>
+            {% endif %}
+        </section>
+
+        <!-- RIGHT SIDE - NOW PLAYING -->
+        <section class="now-playing-section">
+            <h2>Now Playing</h2>
+
+            <div id="now-playing-container">
+                <p>Loading current track...</p>
+            </div>
+
+            <!-- PLAYER CONTROLS -->
+            <div class="player-controls">
+
+                <div class="control-buttons">
+                    <button id="prev-btn">⏮</button>
+                    <button id="play-btn">▶</button>
+                    <button id="pause-btn">⏸</button>
+                    <button id="next-btn">⏭</button>
+                </div>
+
+                <div class="progress-wrapper">
+                    <span id="current-time">0:00</span>
+
+                    <input
+                        type="range"
+                        id="progress-bar"
+                        min="0"
+                        max="100"
+                        value="0"
+                    >
+
+                    <span id="duration">0:00</span>
+                </div>
 
             </div>
-        {% endif %}
+        </section>
+
     </div>
+
+</div>
+
+<script>
+function fetchCurrentlyPlaying() {
+    fetch("/currently_playing")
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById("now-playing-container");
+
+            if (data.error) {
+                container.innerHTML = `<p>${data.error}</p>`;
+                return;
+            }
+
+            container.innerHTML = `
+                <div class="now-playing-card">
+                    <img
+                        src="${data.image}"
+                        alt="${data.name}"
+                        class="now-playing-cover"
+                    >
+
+                    <div class="now-playing-info">
+                        <h3>${data.name}</h3>
+                        <p>${data.artist}</p>
+                        <p><strong>Album:</strong> ${data.album}</p>
+                    </div>
+                </div>
+            `;
+        });
+}
+
+fetchCurrentlyPlaying();
+setInterval(fetchCurrentlyPlaying, 5000);
+</script>
 
 </body>
 </html>

@@ -28,6 +28,9 @@ def login():
         url=auth_data["auth_url"]
     )
 
+from fastapi.responses import RedirectResponse
+
+
 @router.get("/callback")
 def callback(request: Request, code: str):
     token_data = get_access_token(code)
@@ -40,11 +43,22 @@ def callback(request: Request, code: str):
             "details": token_data
         }
 
-
     request.session["token_info"] = token_data
 
-    top_tracks_data = get_user_top_tracks(access_token)
-    top_tracks = top_tracks_data["items"]
+    return RedirectResponse(
+        url="/dashboard",
+        status_code=302
+    )
+
+@router.get("/dashboard")
+def dashboard(request: Request):
+    token = request.session.get("token_info", {}).get("access_token")
+
+    if not token:
+        return RedirectResponse(url="/login")
+
+    top_tracks_data = get_user_top_tracks(token)
+    top_tracks = top_tracks_data.get("items", [])
 
     return templates.TemplateResponse(
         request=request,

@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="dodanie logowania innych uzytkownikow">
-      <change afterPath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spotify_V4/app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spotify_V4/app/services/spotify_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spotify_V4/app/templates/landing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Podstawy_Pycharm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Podstawy_Pycharm.iml" afterDir="false" />
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Spotify_V4 dev project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_V2/.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_V2/.env.template" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V2/.env.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,22 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728035398330</updated>
-    </task>
-    <task id="LOCAL-00031" summary="dodanie funkcjonalnosci zapisu oraz odczytu danych z pliku">
-      <option name="closed" value="true" />
-      <created>1731337842933</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1731337842933</updated>
-    </task>
-    <task id="LOCAL-00032" summary="dodanie funkcjonalnosci zapisu oraz odczytu danych z pliku">
-      <option name="closed" value="true" />
-      <created>1731350725022</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1731350725022</updated>
     </task>
     <task id="LOCAL-00033" summary="dodanie pliku requirements.txt + zapisywanie danych przy awaryjnym wylaczaniu programu">
       <option name="closed" value="true" />
@@ -548,7 +527,23 @@
       <option name="project" value="LOCAL" />
       <updated>1742840792988</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Spotify_V4 dev project">
+      <option name="closed" value="true" />
+      <created>1777235476529</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1777235476529</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Spotify_V4 dev project">
+      <option name="closed" value="true" />
+      <created>1777235487105</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1777235487105</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -563,7 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dodanie 2 wersji - dodanie mozliwosci wpisania kilku miast" />
     <MESSAGE value="dodanie mozliwosci dodania kilku dat" />
     <MESSAGE value="sprawdzenie działania + umozliwienie dodawania kilku dat" />
     <MESSAGE value="poprawienie funkcjonalnosci - dopisywanie dat do miejscowosci. w jednej miejscowosci mozemy miec wiele dac z forecastem pogodowym" />
@@ -588,7 +582,8 @@
     <MESSAGE value="finalna wersja projektu" />
     <MESSAGE value="wizualna poprawa kodu pep" />
     <MESSAGE value="dodanie logowania innych uzytkownikow" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie logowania innych uzytkownikow" />
+    <MESSAGE value="Spotify_V4 dev project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spotify_V4 dev project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
