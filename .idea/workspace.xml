@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Search fixed . List without submit button. + Frontend Search. CSS layout">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="live change music + fix css layout.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,14 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728035398330</updated>
-    </task>
-    <task id="LOCAL-00042" summary="dodanie podstawowych funkcjonalnosci programu">
-      <option name="closed" value="true" />
-      <created>1734290112956</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1734290112957</updated>
     </task>
     <task id="LOCAL-00043" summary="dodanie adresu url API z którego pobieramy dane + dodanie funkcjonalnosci które są opisane w zadaniu">
       <option name="closed" value="true" />
@@ -544,7 +535,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777928537848</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="live change music + fix css layout.">
+      <option name="closed" value="true" />
+      <created>1777934395466</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1777934395466</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -559,7 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="poprawa pliku glownego" />
     <MESSAGE value="bazowe pliki aplikacji do weryfikacji!" />
     <MESSAGE value="poczatkowa wersja" />
     <MESSAGE value="Wersja ktora dziala lecz nie pobiera danych" />
@@ -584,7 +582,8 @@
     <MESSAGE value="Backend Progress bar seek + frontend&#10;Search Backend." />
     <MESSAGE value="Search Backend/ Play Selected track in search" />
     <MESSAGE value="Search fixed . List without submit button. + Frontend Search. CSS layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search fixed . List without submit button. + Frontend Search. CSS layout" />
+    <MESSAGE value="live change music + fix css layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="live change music + fix css layout." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

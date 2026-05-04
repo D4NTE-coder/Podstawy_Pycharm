@@ -84,7 +84,10 @@
 
                     <div id="search-results"></div>
                 </div>
-
+                                     <div class="playlist-section">
+                                        <h3>Your Playlists</h3>
+                                    <div id="playlist-container"></div>
+</div>
             </div>
         </section>
 
@@ -274,10 +277,47 @@ document.getElementById("progress-bar").addEventListener("change", (e) => {
 // ---------- START ----------
 fetchCurrentlyPlaying();
 setInterval(fetchCurrentlyPlaying, 1000);
-
+fetchPlaylists();
 fetchRecentlyPlayed();
 setInterval(fetchRecentlyPlayed, 5000);
 
+//-----------playlists-----------
+function fetchPlaylists() {
+    fetch("/playlists")
+        .then(res => res.json())
+        .then(data => {
+
+            const container = document.getElementById("playlist-container");
+
+            if (!data || data.length === 0) {
+                container.innerHTML = "<p>No playlists</p>";
+                return;
+            }
+
+            container.innerHTML = data.map(pl => `
+                <div class="playlist-item" data-id="${pl.id}">
+                    ${pl.image ? `<img src="${pl.image}" class="playlist-cover">` : ""}
+                    <p>${pl.name}</p>
+                </div>
+            `).join("");
+
+            document.querySelectorAll(".playlist-item").forEach(item => {
+                item.onclick = () => {
+                    const id = item.getAttribute("data-id");
+
+                    fetch("/play_playlist", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(id)
+                    }).then(() => {
+                        fetchCurrentlyPlaying();
+                    });
+                };
+            });
+        });
+}
 </script>
 
 </body>

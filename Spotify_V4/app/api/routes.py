@@ -262,3 +262,46 @@ def play_track(request: Request, uri: str = Body(...)):
     requests.put("https://api.spotify.com/v1/me/player/play",headers=headers,json={"uris": [uri]})
 
     return{"status": "playing"}
+
+@router.get("/playlists")
+def get_playlists(request:Request):
+    token=request.session.get("token_info", {}).get("access_token")
+
+    if not token:
+        return{"error" : "No token"}
+
+    headers = {
+        "Authorization": f"Bearer {token}"
+    }
+
+    response = requests.get("https://api.spotify.com/v1/me/playlists?limit=10", headers=headers)
+
+    data = response.json()
+
+    playlists=[]
+
+    for item in data.get("items", []):
+        playlists.append({
+            "name": item["name"],
+            "id": item["id"],
+            "image": item["images"][0]["url"] if item["images"] else None
+        })
+
+    return playlists
+
+@router.post("/play_playlist")
+def play_playlist(request: Request, playlist_id: str = Body(...)):
+    token = request.session.get("token_info", {}).get("access_token")
+
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
+
+    requests.put(
+        "https://api.spotify.com/v1/me/player/play",
+        headers=headers,
+        json={"context_uri": f"spotify:playlist:{playlist_id}"}
+    )
+
+    return {"status": "playing playlist"}
