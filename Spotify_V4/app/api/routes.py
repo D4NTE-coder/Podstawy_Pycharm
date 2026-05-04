@@ -125,3 +125,15 @@ def currently_playing(request: Request):
     }
 
     return track_info
+
+@router.post("/play")
+def play(request: Request):
+    token = request.session.get("token_info", {}).get("access_token")
+
+    headers = {
+        "Authorization": f"Bearer {token}"
+    }
+
+    requests.put("https://api.spotify.com/v1/me/player/play", headers=headers)
+
+    return {"status" : "playing"}

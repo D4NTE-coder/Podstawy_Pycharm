@@ -124,6 +124,11 @@ function fetchCurrentlyPlaying() {
 
 fetchCurrentlyPlaying();
 setInterval(fetchCurrentlyPlaying, 5000);
+
+    document.getElementById("play-btn").onclick = () => {
+    fetch("/play", { method: "POST" });
+};
+
 </script>
 
 </body>
