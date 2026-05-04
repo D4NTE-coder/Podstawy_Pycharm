@@ -87,6 +87,15 @@
                                      <div class="playlist-section">
                                         <h3>Your Playlists</h3>
                                     <div id="playlist-container"></div>
+
+                                         <div class="liked-section">
+                                            <h3>Liked Songs</h3>
+
+                                    <button id="play-liked-btn" class="spotify-btn">
+                                        ▶ Play Liked Songs
+                                    </button>
+                                             <div id="liked-container"></div>
+                                    </div>
 </div>
             </div>
         </section>
@@ -259,7 +268,10 @@ document.getElementById("play-btn").onclick = () => fetch("/play", { method: "PO
 document.getElementById("pause-btn").onclick = () => fetch("/pause", { method: "POST" });
 document.getElementById("next-btn").onclick = () => fetch("/next", { method: "POST" });
 document.getElementById("prev-btn").onclick = () => fetch("/previous", { method: "POST" });
-
+document.getElementById("play-liked-btn").onclick = () => {
+fetch("/play_liked", { method: "POST" })
+        .then(() => fetchCurrentlyPlaying());
+};
 // ---------- SEEK ----------
 document.getElementById("progress-bar").addEventListener("change", (e) => {
     const percent = e.target.value;
@@ -280,6 +292,7 @@ setInterval(fetchCurrentlyPlaying, 1000);
 fetchPlaylists();
 fetchRecentlyPlayed();
 setInterval(fetchRecentlyPlayed, 5000);
+fetchLikedSongs();
 
 //-----------playlists-----------
 function fetchPlaylists() {
@@ -314,6 +327,45 @@ function fetchPlaylists() {
                     }).then(() => {
                         fetchCurrentlyPlaying();
                     });
+                };
+            });
+        });
+}
+//---------likedsongs--------
+function fetchLikedSongs() {
+    fetch("/liked_songs")
+        .then(res => res.json())
+        .then(data => {
+
+            const container = document.getElementById("liked-container");
+
+            if (!data || data.length === 0) {
+                container.innerHTML = "<p>No liked songs</p>";
+                return;
+            }
+
+            container.innerHTML = data.map(track => `
+                <div class="search-item" data-uri="${track.uri}">
+                    <img src="${track.image}" class="search-cover">
+                    <div>
+                        <p><strong>${track.name}</strong></p>
+                        <p>${track.artist}</p>
+                    </div>
+                </div>
+            `).join("");
+
+            // klik = play track
+            document.querySelectorAll("#liked-container .search-item").forEach(item => {
+                item.onclick = () => {
+                    const uri = item.getAttribute("data-uri");
+
+                    fetch("/play_track", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(uri)
+                    }).then(() => fetchCurrentlyPlaying());
                 };
             });
         });

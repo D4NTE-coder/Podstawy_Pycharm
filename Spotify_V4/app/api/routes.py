@@ -305,3 +305,52 @@ def play_playlist(request: Request, playlist_id: str = Body(...)):
     )
 
     return {"status": "playing playlist"}
+
+@router.get("/liked_songs")
+def liked_songs(request: Request):
+    token = request.session.get("token_info", {}).get("access_token")
+
+    if not token:
+        return {"error": "No token"}
+
+    headers = {
+        "Authorization": f"Bearer {token}"
+    }
+
+    response = requests.get(
+        "https://api.spotify.com/v1/me/tracks?limit=10",
+        headers=headers
+    )
+
+    data = response.json()
+
+    tracks = []
+
+    for item in data.get("items", []):
+        track = item["track"]
+
+        tracks.append({
+            "name": track["name"],
+            "artist": ", ".join([a["name"] for a in track["artists"]]),
+            "uri": track["uri"],
+            "image": track["album"]["images"][0]["url"]
+        })
+
+    return tracks
+
+@router.post("/play_liked")
+def play_liked(request: Request):
+    token = request.session.get("token_info", {}).get("access_token")
+
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
+
+    requests.put(
+        "https://api.spotify.com/v1/me/player/play",
+        headers=headers,
+        json={"context_uri": "spotify:collection"}
+    )
+
+    return {"status": "playing liked songs"}
