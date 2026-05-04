@@ -45,31 +45,46 @@
         <section class="now-playing-section">
             <h2>Now Playing</h2>
 
-            <div id="now-playing-container">
-                <p>Loading current track...</p>
-            </div>
+            <div class="player-search-layout">
 
-            <div class="player-controls">
+                <!-- PLAYER -->
+                <div class="player-side">
 
-                <div class="control-buttons">
-                    <button id="prev-btn">⏮</button>
-                    <button id="play-btn">▶</button>
-                    <button id="pause-btn">⏸</button>
-                    <button id="next-btn">⏭</button>
-                </div>
+                    <div id="now-playing-container">
+                        <p>Loading current track...</p>
+                    </div>
 
-                <div class="progress-wrapper">
-                    <span id="current-time">0:00</span>
+                    <div class="player-controls">
 
-                    <input type="range" id="progress-bar" min="0" max="100" value="0">
+                        <div class="control-buttons">
+                            <button id="prev-btn">⏮</button>
+                            <button id="play-btn">▶</button>
+                            <button id="pause-btn">⏸</button>
+                            <button id="next-btn">⏭</button>
+                        </div>
 
-                    <span id="duration">0:00</span>
+                        <div class="progress-wrapper">
+                            <span id="current-time">0:00</span>
+                            <input type="range" id="progress-bar" min="0" max="100" value="0">
+                            <span id="duration">0:00</span>
+                        </div>
 
-                </div>
+                    </div>
+
                     <div class="recently-played-section">
-    <h3>Recently Played</h3>
-    <div id="recently-played-container"></div>
-</div>
+                        <h3>Recently Played</h3>
+                        <div id="recently-played-container"></div>
+                    </div>
+
+                </div>
+
+                <!-- SEARCH -->
+                <div class="search-section">
+                    <input type="text" id="search-input" placeholder="Search songs...">
+
+                    <div id="search-results"></div>
+                </div>
+
             </div>
         </section>
 
@@ -78,6 +93,7 @@
 
 <script>
 
+// ---------- FORMAT ----------
 function formatTime(ms) {
     const seconds = Math.floor(ms / 1000);
     const min = Math.floor(seconds / 60);
@@ -86,16 +102,22 @@ function formatTime(ms) {
     return `${min}:${sec < 10 ? "0" : ""}${sec}`;
 }
 
+// ---------- PROGRESS ----------
+let currentDuration = 0;
+
 function updateProgress(data) {
     if (!data) return;
 
-    const progressPercent = (data.progress_ms / data.duration_ms) * 100;
+    currentDuration = data.duration_ms;
 
-    document.getElementById("progress-bar").value = progressPercent;
+    const percent = (data.progress_ms / data.duration_ms) * 100;
+
+    document.getElementById("progress-bar").value = percent;
     document.getElementById("current-time").innerText = formatTime(data.progress_ms);
     document.getElementById("duration").innerText = formatTime(data.duration_ms);
 }
 
+// ---------- NOW PLAYING ----------
 function fetchCurrentlyPlaying() {
     fetch("/currently_playing")
         .then(res => res.json())
@@ -124,29 +146,7 @@ function fetchCurrentlyPlaying() {
         });
 }
 
-fetchCurrentlyPlaying();
-setInterval(fetchCurrentlyPlaying, 1000);
-fetchRecentlyPlayed();
-setInterval(fetchRecentlyPlayed, 1000);
-
-// BUTTONY
-document.getElementById("play-btn").onclick = () => {
-    fetch("/play", { method: "POST" });
-};
-
-document.getElementById("pause-btn").onclick = () => {
-    fetch("/pause", { method: "POST" });
-};
-
-document.getElementById("next-btn").onclick = () => {
-    fetch("/next", { method: "POST" });
-};
-
-document.getElementById("prev-btn").onclick = () => {
-    fetch("/previous", { method: "POST" });
-};
-
-
+// ---------- RECENTLY ----------
 function fetchRecentlyPlayed() {
     fetch("/recently_played")
         .then(res => res.json())
@@ -171,28 +171,61 @@ function fetchRecentlyPlayed() {
         });
 }
 
-    let currentDuration = 0;
+// ---------- SEARCH ----------
+let searchTimeout;
 
-function updateProgress(data) {
-    if (!data) return;
+document.getElementById("search-input").addEventListener("input", (e) => {
+    const query = e.target.value;
 
-    currentDuration = data.duration_ms;
+    clearTimeout(searchTimeout);
 
-    const progressPercent =
-        (data.progress_ms / data.duration_ms) * 100;
+    searchTimeout = setTimeout(() => {
+        if (query.length < 2) return;
 
-    document.getElementById("progress-bar").value = progressPercent;
+        fetch(`/search?query=${query}`)
+            .then(res => res.json())
+            .then(data => {
 
-    document.getElementById("current-time").innerText =
-        formatTime(data.progress_ms);
+                const container = document.getElementById("search-results");
 
-    document.getElementById("duration").innerText =
-        formatTime(data.duration_ms);
-}
+                container.innerHTML = data.map(track => `
+                    <div class="search-item" data-uri="${track.uri}">
+                        <img src="${track.image}" class="search-cover">
+                        <div>
+                            <p><strong>${track.name}</strong></p>
+                            <p>${track.artist}</p>
+                        </div>
+                    </div>
+                `).join("");
 
-    document.getElementById("progress-bar").addEventListener("change", (e) => {
+                document.querySelectorAll(".search-item").forEach(item => {
+                    item.onclick = () => {
+                        const uri = item.getAttribute("data-uri");
+
+                        fetch("/play_track", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify(uri)
+                        });
+                    };
+                });
+
+            });
+
+    }, 400);
+});
+
+// ---------- PLAYER CONTROLS ----------
+document.getElementById("play-btn").onclick = () => fetch("/play", { method: "POST" });
+document.getElementById("pause-btn").onclick = () => fetch("/pause", { method: "POST" });
+document.getElementById("next-btn").onclick = () => fetch("/next", { method: "POST" });
+document.getElementById("prev-btn").onclick = () => fetch("/previous", { method: "POST" });
+
+// ---------- SEEK ----------
+document.getElementById("progress-bar").addEventListener("change", (e) => {
     const percent = e.target.value;
-
     const newPosition = (percent / 100) * currentDuration;
 
     fetch("/seek", {
@@ -203,8 +236,16 @@ function updateProgress(data) {
         body: JSON.stringify(Math.floor(newPosition))
     });
 });
+
+// ---------- START ----------
+fetchCurrentlyPlaying();
+setInterval(fetchCurrentlyPlaying, 1000);
+
+fetchRecentlyPlayed();
+setInterval(fetchRecentlyPlayed, 5000);
+
 </script>
 
 </body>
 </html>
-```
+

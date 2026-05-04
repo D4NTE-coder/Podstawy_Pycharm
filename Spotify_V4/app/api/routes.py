@@ -193,12 +193,11 @@ def recently_played(request: Request):
 
         tracks.append({
             "name": track["name"],
-            "artist": ", ".join([a["name"] for a in track ["artists"]]),
+            "artist": ", ".join([a["name"] for a in track["artists"]]),
             "image": track["album"]["images"][0]["url"]
-
         })
 
-        return tracks
+    return tracks
 
 @router.post("/seek")
 def seek(request: Request, position_ms: int = Body(...)):
@@ -232,12 +231,12 @@ def search(query: str, request:Request):
     for item in data.get("tracks", {}).get("items", []):
         results.append({
             "name": item["name"],
-            "artist": ", ".join([a["name"] for a in item["artits"]]),
+            "artist": ", ".join([a["name"] for a in item["artists"]]),
             "uri": item["uri"],
             "image": item["album"]["images"][0]["url"]
         })
 
-        return results
+    return results
 
 
 @router.post("/play_track")

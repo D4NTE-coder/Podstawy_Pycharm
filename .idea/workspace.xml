@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="SDK next song button">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Search Backend/ Play Selected track in search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_V4/app/services/spotify_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/services/spotify_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,38 +152,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728035398330</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Manager Plikow CSV po tescie">
-      <option name="closed" value="true" />
-      <created>1733080471027</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1733080471027</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Manager Plikow CSV po tescie">
-      <option name="closed" value="true" />
-      <created>1733080575754</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1733080575754</updated>
-    </task>
-    <task id="LOCAL-00039" summary="refactor kodu">
-      <option name="closed" value="true" />
-      <created>1733080688729</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1733080688729</updated>
-    </task>
-    <task id="LOCAL-00040" summary="refactor kodu">
-      <option name="closed" value="true" />
-      <created>1733083061515</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1733083061515</updated>
     </task>
     <task id="LOCAL-00041" summary="dodanie podstawowych funkcjonalnosci programu">
       <option name="closed" value="true" />
@@ -543,7 +513,39 @@
       <option name="project" value="LOCAL" />
       <updated>1777909088364</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="SDK previous song button">
+      <option name="closed" value="true" />
+      <created>1777909470422</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1777909470422</updated>
+    </task>
+    <task id="LOCAL-00087" summary="SDK previous song button">
+      <option name="closed" value="true" />
+      <created>1777909580809</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1777909580810</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Backend Progress bar seek + frontend&#10;Search Backend.">
+      <option name="closed" value="true" />
+      <created>1777914950086</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1777914950086</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Search Backend/ Play Selected track in search">
+      <option name="closed" value="true" />
+      <created>1777915172171</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1777915172171</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -558,9 +560,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reformat kodu dodanie funkcji magicznej __setitem__" />
-    <MESSAGE value="poprawienie iterowania po city,date. Dodanie metody items zwracajacej generator tupli" />
-    <MESSAGE value="requirements.txt" />
     <MESSAGE value="plik json" />
     <MESSAGE value="poprawa pliku glownego" />
     <MESSAGE value="bazowe pliki aplikacji do weryfikacji!" />
@@ -583,7 +582,10 @@
     <MESSAGE value="SDK play button" />
     <MESSAGE value="SDK pause button" />
     <MESSAGE value="SDK next song button" />
-    <option name="LAST_COMMIT_MESSAGE" value="SDK next song button" />
+    <MESSAGE value="SDK previous song button" />
+    <MESSAGE value="Backend Progress bar seek + frontend&#10;Search Backend." />
+    <MESSAGE value="Search Backend/ Play Selected track in search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search Backend/ Play Selected track in search" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
