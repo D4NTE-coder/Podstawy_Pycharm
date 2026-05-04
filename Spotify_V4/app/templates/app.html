@@ -24,16 +24,16 @@
                 <div class="tracks-grid">
                     {% for track in top_tracks %}
                         <div class="track-card">
-                            <img src="{{ track['album']['images'][0]['url'] }}" class="album-cover">
+                            <img src="{{ track['image'] }}" class="album-cover">
 
                             <div class="track-info">
                                 <h3>{{ track['name'] }}</h3>
-                                <p>{{ track['artists'][0]['name'] }}</p>
+                                <p>{{ track['artist'] }}</p>
                                 <p>Popularity: {{ track['popularity'] }}</p>
 
-                                <a href="{{ track['external_urls']['spotify'] }}" target="_blank" class="spotify-btn">
-                                    Open in Spotify
-                                </a>
+                                <button class="spotify-btn play-track-btn" data-uri="{{ track['uri'] }}">
+                                    Play
+                                </button>
                             </div>
                         </div>
                     {% endfor %}
@@ -92,6 +92,25 @@
 </div>
 
 <script>
+//---------TOP TRACKS BUTTON-------
+
+document.querySelectorAll(".play-track-btn").forEach(btn => {
+    btn.onclick = () => {
+        const uri = btn.getAttribute("data-uri");
+
+        fetch("/play_track", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(uri)
+        })
+        .then(() => {
+            document.getElementById("now-playing-container").innerHTML = "Loading...";
+            fetchCurrentlyPlaying();
+        });
+    };
+});
 
 // ---------- FORMAT ----------
 function formatTime(ms) {
@@ -179,42 +198,57 @@ document.getElementById("search-input").addEventListener("input", (e) => {
 
     clearTimeout(searchTimeout);
 
-    searchTimeout = setTimeout(() => {
-        if (query.length < 2) return;
+searchTimeout = setTimeout(() => {
 
-        fetch(`/search?query=${query}`)
-            .then(res => res.json())
-            .then(data => {
+    const container = document.getElementById("search-results");
 
-                const container = document.getElementById("search-results");
+    if (query.length < 2) {
+        container.innerHTML = "";
+        return;
+    }
 
-                container.innerHTML = data.map(track => `
-                    <div class="search-item" data-uri="${track.uri}">
-                        <img src="${track.image}" class="search-cover">
-                        <div>
-                            <p><strong>${track.name}</strong></p>
-                            <p>${track.artist}</p>
-                        </div>
+    container.innerHTML = "Loading...";
+
+    fetch(`/search?query=${query}`)
+        .then(res => res.json())
+        .then(data => {
+
+            if (!data || data.length === 0) {
+                container.innerHTML = "<p>No results</p>";
+                return;
+            }
+
+            container.innerHTML = data.map(track => `
+                <div class="search-item" data-uri="${track.uri}">
+                    <img src="${track.image}" class="search-cover">
+                    <div>
+                        <p><strong>${track.name}</strong></p>
+                        <p>${track.artist}</p>
                     </div>
-                `).join("");
+                </div>
+            `).join("");
 
-                document.querySelectorAll(".search-item").forEach(item => {
-                    item.onclick = () => {
-                        const uri = item.getAttribute("data-uri");
+            document.querySelectorAll(".search-item").forEach(item => {
+                item.onclick = () => {
+                    const uri = item.getAttribute("data-uri");
 
-                        fetch("/play_track", {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json"
-                            },
-                            body: JSON.stringify(uri)
-                        });
-                    };
-                });
-
+                    fetch("/play_track", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(uri)
+                    })
+                    .then(() => {
+                        document.getElementById("now-playing-container").innerHTML = "Loading...";
+                        fetchCurrentlyPlaying();
+                    });
+                };
             });
 
-    }, 400);
+        });
+
+}, 400);
 });
 
 // ---------- PLAYER CONTROLS ----------

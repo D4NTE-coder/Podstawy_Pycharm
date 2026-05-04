@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Search Backend/ Play Selected track in search">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Search fixed . List without submit button. + Frontend Search. CSS layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_V4/app/services/spotify_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/services/spotify_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" afterDir="false" />
     </list>
@@ -152,14 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728035398330</updated>
-    </task>
-    <task id="LOCAL-00041" summary="dodanie podstawowych funkcjonalnosci programu">
-      <option name="closed" value="true" />
-      <created>1734290054192</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1734290054192</updated>
     </task>
     <task id="LOCAL-00042" summary="dodanie podstawowych funkcjonalnosci programu">
       <option name="closed" value="true" />
@@ -545,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777915172171</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Search fixed . List without submit button. + Frontend Search. CSS layout">
+      <option name="closed" value="true" />
+      <created>1777928537848</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1777928537848</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -560,7 +559,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="plik json" />
     <MESSAGE value="poprawa pliku glownego" />
     <MESSAGE value="bazowe pliki aplikacji do weryfikacji!" />
     <MESSAGE value="poczatkowa wersja" />
@@ -585,7 +583,8 @@
     <MESSAGE value="SDK previous song button" />
     <MESSAGE value="Backend Progress bar seek + frontend&#10;Search Backend." />
     <MESSAGE value="Search Backend/ Play Selected track in search" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search Backend/ Play Selected track in search" />
+    <MESSAGE value="Search fixed . List without submit button. + Frontend Search. CSS layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search fixed . List without submit button. + Frontend Search. CSS layout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

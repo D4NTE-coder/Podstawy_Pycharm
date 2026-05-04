@@ -58,7 +58,18 @@ def dashboard(request: Request):
         return RedirectResponse(url="/login")
 
     top_tracks_data = get_user_top_tracks(token)
-    top_tracks = top_tracks_data.get("items", [])
+
+    top_tracks = []
+
+    for item in top_tracks_data.get("items", []):
+        top_tracks.append({
+            "name": item["name"],
+            "artist": item["artists"][0]["name"],
+            "popularity": item["popularity"],
+            "image": item["album"]["images"][0]["url"],
+            "spotify_url": item["external_urls"]["spotify"],
+            "uri": item["uri"]  # 🔥 KLUCZOWE
+        })
 
     return templates.TemplateResponse(
         request=request,
@@ -68,7 +79,6 @@ def dashboard(request: Request):
             "top_tracks": top_tracks
         }
     )
-
 @router.get("/get_token")
 def get_token(request: Request):
     token = request.session.get("token_info", {}).get("access_token")
