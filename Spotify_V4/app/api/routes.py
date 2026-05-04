@@ -151,3 +151,12 @@ def pause(request: Request):
     return {"status": "paused"}
 
 
+@router.post("/next")
+def next_track(request: Request):
+    token = request.session.get("token_info", {}).get("access_token")
+
+    headers = {"Authorization": f"Bearer {token}"}
+
+    requests.post("https://api.spotify.com/v1/me/player/next", headers=headers)
+
+    return {"status": "next"}

@@ -133,6 +133,10 @@ setInterval(fetchCurrentlyPlaying, 5000);
     fetch("/pause", { method: "POST" });
 };
 
+    document.getElementById("next-btn").onclick = () => {
+    fetch("/next", { method: "POST" });
+};
+
 </script>
 
 </body>
