@@ -160,3 +160,13 @@ def next_track(request: Request):
     requests.post("https://api.spotify.com/v1/me/player/next", headers=headers)
 
     return {"status": "next"}
+
+@router.post("/previous")
+def previous_track(request: Request):
+    token =  request.session.get("token_info", {}).get("access_token")
+
+    headers = {"Authorization": f"Bearer {token}"}
+
+    requests.post("https://api.spotify.com/v1/me/player/previous", headers=headers)
+
+    return {"status" : "previous"}

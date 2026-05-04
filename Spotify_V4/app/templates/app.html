@@ -137,6 +137,10 @@ setInterval(fetchCurrentlyPlaying, 5000);
     fetch("/next", { method: "POST" });
 };
 
+    document.getElementById("prev-btn").onclick = () => {
+    fetch("/previous", { method: "POST" });
+};
+
 </script>
 
 </body>
