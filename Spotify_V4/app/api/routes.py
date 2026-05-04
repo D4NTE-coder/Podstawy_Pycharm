@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Request
+from fastapi import APIRouter, Request, Body
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import RedirectResponse
 from app.services.spotify_service import (
@@ -170,3 +170,73 @@ def previous_track(request: Request):
     requests.post("https://api.spotify.com/v1/me/player/previous", headers=headers)
 
     return {"status" : "previous"}
+
+@router.get("/recently_played")
+def recently_played(request: Request):
+    token = request.session.get("token_info", {}).get("access_token")
+
+    if not token:
+        return {"error" : "No Token"}
+
+    headers = {
+        "Authorization": f"Bearer {token}"
+    }
+
+    response = requests.get("https://api.spotify.com/v1/me/player/recently-played?limit=5", headers=headers)
+
+    data = response.json()
+
+    tracks = []
+
+    for item in data.get("items", []):
+        track = item["track"]
+
+        tracks.append({
+            "name": track["name"],
+            "artist": ", ".join([a["name"] for a in track ["artists"]]),
+            "image": track["album"]["images"][0]["url"]
+
+        })
+
+        return tracks
+
+@router.post("/seek")
+def seek(request: Request, position_ms: int = Body(...)):
+    token =  request.session.get("token_info", {}).get("access_token")
+
+    headers = {
+        "Authorization" : f"Bearer {token}"
+    }
+
+    requests.put(        f"https://api.spotify.com/v1/me/player/seek?position_ms={position_ms}",headers=headers)
+
+    return {"status" : "seeked"}
+
+@router.get("/search")
+def search(query: str, request:Request):
+    token = request.session.get("token_info", {}).get("access_token")
+
+    if not token:
+        return{"error" : "No token"}
+
+    headers = {
+        "Authorization": f"Bearer {token}"
+    }
+
+    response = requests.get(f"https://api.spotify.com/v1/search?q={query}&type=track&limit=5",headers=headers)
+
+    data = response.json()
+
+    results=[]
+
+    for item in data.get("tracks", {}).get("items", []):
+        results.append({
+            "name": item["name"],
+            "artist": ", ".join([a["name"] for a in item["artits"]]),
+            "uri": item["uri"],
+            "image": item["album"]["images"][0]["url"]
+        })
+
+        return results
+
+

@@ -17,6 +17,7 @@ def get_auth_url():
         "user-read-currently-playing "
         "user-modify-playback-state "
         "streaming"
+        "user-modify-playback-state"
     )
 
     params = {

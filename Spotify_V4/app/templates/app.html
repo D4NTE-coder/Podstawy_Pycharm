@@ -16,44 +16,32 @@
 
     <div class="dashboard-layout">
 
-        <!-- LEFT SIDE - TOP TRACKS -->
+        <!-- LEFT SIDE -->
         <section class="top-tracks-section">
             <h2>Your Top Tracks</h2>
 
             {% if top_tracks %}
                 <div class="tracks-grid">
-
                     {% for track in top_tracks %}
                         <div class="track-card">
-
-                            <img
-                                src="{{ track['album']['images'][0]['url'] }}"
-                                alt="Album Cover"
-                                class="album-cover"
-                            >
+                            <img src="{{ track['album']['images'][0]['url'] }}" class="album-cover">
 
                             <div class="track-info">
                                 <h3>{{ track['name'] }}</h3>
                                 <p>{{ track['artists'][0]['name'] }}</p>
                                 <p>Popularity: {{ track['popularity'] }}</p>
 
-                                <a
-                                    href="{{ track['external_urls']['spotify'] }}"
-                                    target="_blank"
-                                    class="spotify-btn"
-                                >
+                                <a href="{{ track['external_urls']['spotify'] }}" target="_blank" class="spotify-btn">
                                     Open in Spotify
                                 </a>
                             </div>
-
                         </div>
                     {% endfor %}
-
                 </div>
             {% endif %}
         </section>
 
-        <!-- RIGHT SIDE - NOW PLAYING -->
+        <!-- RIGHT SIDE -->
         <section class="now-playing-section">
             <h2>Now Playing</h2>
 
@@ -61,7 +49,6 @@
                 <p>Loading current track...</p>
             </div>
 
-            <!-- PLAYER CONTROLS -->
             <div class="player-controls">
 
                 <div class="control-buttons">
@@ -74,29 +61,46 @@
                 <div class="progress-wrapper">
                     <span id="current-time">0:00</span>
 
-                    <input
-                        type="range"
-                        id="progress-bar"
-                        min="0"
-                        max="100"
-                        value="0"
-                    >
+                    <input type="range" id="progress-bar" min="0" max="100" value="0">
 
                     <span id="duration">0:00</span>
-                </div>
 
+                </div>
+                    <div class="recently-played-section">
+    <h3>Recently Played</h3>
+    <div id="recently-played-container"></div>
+</div>
             </div>
         </section>
 
     </div>
-
 </div>
 
 <script>
+
+function formatTime(ms) {
+    const seconds = Math.floor(ms / 1000);
+    const min = Math.floor(seconds / 60);
+    const sec = seconds % 60;
+
+    return `${min}:${sec < 10 ? "0" : ""}${sec}`;
+}
+
+function updateProgress(data) {
+    if (!data) return;
+
+    const progressPercent = (data.progress_ms / data.duration_ms) * 100;
+
+    document.getElementById("progress-bar").value = progressPercent;
+    document.getElementById("current-time").innerText = formatTime(data.progress_ms);
+    document.getElementById("duration").innerText = formatTime(data.duration_ms);
+}
+
 function fetchCurrentlyPlaying() {
     fetch("/currently_playing")
-        .then(response => response.json())
+        .then(res => res.json())
         .then(data => {
+
             const container = document.getElementById("now-playing-container");
 
             if (data.error) {
@@ -106,11 +110,7 @@ function fetchCurrentlyPlaying() {
 
             container.innerHTML = `
                 <div class="now-playing-card">
-                    <img
-                        src="${data.image}"
-                        alt="${data.name}"
-                        class="now-playing-cover"
-                    >
+                    <img src="${data.image}" class="now-playing-cover">
 
                     <div class="now-playing-info">
                         <h3>${data.name}</h3>
@@ -119,29 +119,92 @@ function fetchCurrentlyPlaying() {
                     </div>
                 </div>
             `;
+
+            updateProgress(data);
         });
 }
 
 fetchCurrentlyPlaying();
-setInterval(fetchCurrentlyPlaying, 5000);
+setInterval(fetchCurrentlyPlaying, 1000);
+fetchRecentlyPlayed();
+setInterval(fetchRecentlyPlayed, 1000);
 
-    document.getElementById("play-btn").onclick = () => {
+// BUTTONY
+document.getElementById("play-btn").onclick = () => {
     fetch("/play", { method: "POST" });
 };
 
-    document.getElementById("pause-btn").onclick = () => {
+document.getElementById("pause-btn").onclick = () => {
     fetch("/pause", { method: "POST" });
 };
 
-    document.getElementById("next-btn").onclick = () => {
+document.getElementById("next-btn").onclick = () => {
     fetch("/next", { method: "POST" });
 };
 
-    document.getElementById("prev-btn").onclick = () => {
+document.getElementById("prev-btn").onclick = () => {
     fetch("/previous", { method: "POST" });
 };
 
+
+function fetchRecentlyPlayed() {
+    fetch("/recently_played")
+        .then(res => res.json())
+        .then(data => {
+
+            const container = document.getElementById("recently-played-container");
+
+            if (!data || data.error) {
+                container.innerHTML = "<p>No data</p>";
+                return;
+            }
+
+            container.innerHTML = data.map(track => `
+                <div class="recent-track">
+                    <img src="${track.image}" class="recent-cover">
+                    <div>
+                        <p><strong>${track.name}</strong></p>
+                        <p>${track.artist}</p>
+                    </div>
+                </div>
+            `).join("");
+        });
+}
+
+    let currentDuration = 0;
+
+function updateProgress(data) {
+    if (!data) return;
+
+    currentDuration = data.duration_ms;
+
+    const progressPercent =
+        (data.progress_ms / data.duration_ms) * 100;
+
+    document.getElementById("progress-bar").value = progressPercent;
+
+    document.getElementById("current-time").innerText =
+        formatTime(data.progress_ms);
+
+    document.getElementById("duration").innerText =
+        formatTime(data.duration_ms);
+}
+
+    document.getElementById("progress-bar").addEventListener("change", (e) => {
+    const percent = e.target.value;
+
+    const newPosition = (percent / 100) * currentDuration;
+
+    fetch("/seek", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(Math.floor(newPosition))
+    });
+});
 </script>
 
 </body>
 </html>
+```
