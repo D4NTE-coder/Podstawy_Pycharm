@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Spotify_V4 dev project">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="SDK next song button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +24,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -82,7 +82,7 @@
       <recent name="C:\Users\Damian\PycharmProjects\Podstawy_Pycharm\CSVManager" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.app">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Podstawy_Pycharm" />
       <option name="ENV_FILES" value="" />
@@ -150,38 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728035398330</updated>
-    </task>
-    <task id="LOCAL-00033" summary="dodanie pliku requirements.txt + zapisywanie danych przy awaryjnym wylaczaniu programu">
-      <option name="closed" value="true" />
-      <created>1731607405862</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1731607405862</updated>
-    </task>
-    <task id="LOCAL-00034" summary="dodanie poprawnosci sprzedarzy oraz nie dublowania sie samochodów">
-      <option name="closed" value="true" />
-      <created>1731941783377</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1731941783377</updated>
-    </task>
-    <task id="LOCAL-00035" summary="reformatowanie tekstu">
-      <option name="closed" value="true" />
-      <created>1731941827732</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1731941827732</updated>
-    </task>
-    <task id="LOCAL-00036" summary="biblioteki">
-      <option name="closed" value="true" />
-      <created>1731952639327</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1731952639327</updated>
     </task>
     <task id="LOCAL-00037" summary="Manager Plikow CSV po tescie">
       <option name="closed" value="true" />
@@ -543,7 +511,39 @@
       <option name="project" value="LOCAL" />
       <updated>1777235487105</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Spotify_V4 dev project&#10;&#10;sdk player + layout">
+      <option name="closed" value="true" />
+      <created>1777239033074</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1777239033074</updated>
+    </task>
+    <task id="LOCAL-00083" summary="SDK play button">
+      <option name="closed" value="true" />
+      <created>1777908117083</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1777908117084</updated>
+    </task>
+    <task id="LOCAL-00084" summary="SDK pause button">
+      <option name="closed" value="true" />
+      <created>1777908431233</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1777908431233</updated>
+    </task>
+    <task id="LOCAL-00085" summary="SDK next song button">
+      <option name="closed" value="true" />
+      <created>1777909088364</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1777909088364</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -558,10 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dodanie mozliwosci dodania kilku dat" />
-    <MESSAGE value="sprawdzenie działania + umozliwienie dodawania kilku dat" />
-    <MESSAGE value="poprawienie funkcjonalnosci - dopisywanie dat do miejscowosci. w jednej miejscowosci mozemy miec wiele dac z forecastem pogodowym" />
-    <MESSAGE value="reformat kodu" />
     <MESSAGE value="reformat kodu dodanie funkcji magicznej __setitem__" />
     <MESSAGE value="poprawienie iterowania po city,date. Dodanie metody items zwracajacej generator tupli" />
     <MESSAGE value="requirements.txt" />
@@ -583,7 +579,11 @@
     <MESSAGE value="wizualna poprawa kodu pep" />
     <MESSAGE value="dodanie logowania innych uzytkownikow" />
     <MESSAGE value="Spotify_V4 dev project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spotify_V4 dev project" />
+    <MESSAGE value="Spotify_V4 dev project&#10;&#10;sdk player + layout" />
+    <MESSAGE value="SDK play button" />
+    <MESSAGE value="SDK pause button" />
+    <MESSAGE value="SDK next song button" />
+    <option name="LAST_COMMIT_MESSAGE" value="SDK next song button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
