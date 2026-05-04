@@ -137,3 +137,17 @@ def play(request: Request):
     requests.put("https://api.spotify.com/v1/me/player/play", headers=headers)
 
     return {"status" : "playing"}
+
+@router.post("/pause")
+def pause(request: Request):
+    token = request.session.get("token_info", {}).get("access_token")
+
+    headers = {
+        "Authorization": f"Bearer {token}"
+    }
+
+    requests.put("https://api.spotify.com/v1/me/player/pause", headers=headers)
+
+    return {"status": "paused"}
+
+
