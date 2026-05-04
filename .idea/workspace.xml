@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="adding playlists backend + html + css">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Liked songs backed + frontend + scripts. + New scope.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_V4/app/services/spotify_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/services/spotify_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" afterDir="false" />
     </list>
@@ -152,22 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728035398330</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Dodanie zarządzanie datami w przypadku nie wprowadzenia daty badz zlego formatu automatycznie zaciagany jest nastepny dzien">
-      <option name="closed" value="true" />
-      <created>1734291491499</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1734291491499</updated>
-    </task>
-    <task id="LOCAL-00045" summary="dodanie file_handler do zapisu i odczytu plikow">
-      <option name="closed" value="true" />
-      <created>1734292051885</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1734292051885</updated>
     </task>
     <task id="LOCAL-00046" summary="Dodanie geopy - program sam wyszukuje współrzedne - modyfikacja kodu">
       <option name="closed" value="true" />
@@ -545,7 +527,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777935291790</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Liked songs backed + frontend + scripts. + New scope.">
+      <option name="closed" value="true" />
+      <created>1777935978167</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1777935978167</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Liked songs backed + frontend + scripts. + New scope.">
+      <option name="closed" value="true" />
+      <created>1777935984974</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1777935984974</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -560,7 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="poczatkowa wersja" />
     <MESSAGE value="Wersja ktora dziala lecz nie pobiera danych" />
     <MESSAGE value="dzialajacy program lekko zmodyfikowany" />
     <MESSAGE value="zmiany graficzne oraz dodawanie albumu" />
@@ -585,7 +582,8 @@
     <MESSAGE value="Search fixed . List without submit button. + Frontend Search. CSS layout" />
     <MESSAGE value="live change music + fix css layout." />
     <MESSAGE value="adding playlists backend + html + css" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding playlists backend + html + css" />
+    <MESSAGE value="Liked songs backed + frontend + scripts. + New scope." />
+    <option name="LAST_COMMIT_MESSAGE" value="Liked songs backed + frontend + scripts. + New scope." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -16,7 +16,7 @@
 
     <div class="dashboard-layout">
 
-        <!-- LEFT SIDE -->
+        <!-- LEFT -->
         <section class="top-tracks-section">
             <h2>Your Top Tracks</h2>
 
@@ -41,63 +41,67 @@
             {% endif %}
         </section>
 
-        <!-- RIGHT SIDE -->
+        <!-- CENTER -->
         <section class="now-playing-section">
             <h2>Now Playing</h2>
 
-            <div class="player-search-layout">
+            <div class="player-side">
 
-                <!-- PLAYER -->
-                <div class="player-side">
+                <div id="now-playing-container">
+                    <p>Loading current track...</p>
+                </div>
 
-                    <div id="now-playing-container">
-                        <p>Loading current track...</p>
+                <div class="player-controls">
+
+                    <div class="control-buttons">
+                        <button id="prev-btn">⏮</button>
+                        <button id="play-btn">▶</button>
+                        <button id="pause-btn">⏸</button>
+                        <button id="next-btn">⏭</button>
                     </div>
 
-                    <div class="player-controls">
-
-                        <div class="control-buttons">
-                            <button id="prev-btn">⏮</button>
-                            <button id="play-btn">▶</button>
-                            <button id="pause-btn">⏸</button>
-                            <button id="next-btn">⏭</button>
-                        </div>
-
-                        <div class="progress-wrapper">
-                            <span id="current-time">0:00</span>
-                            <input type="range" id="progress-bar" min="0" max="100" value="0">
-                            <span id="duration">0:00</span>
-                        </div>
-
-                    </div>
-
-                    <div class="recently-played-section">
-                        <h3>Recently Played</h3>
-                        <div id="recently-played-container"></div>
+                    <div class="progress-wrapper">
+                        <span id="current-time">0:00</span>
+                        <input type="range" id="progress-bar" min="0" max="100" value="0">
+                        <span id="duration">0:00</span>
                     </div>
 
                 </div>
 
-                <!-- SEARCH -->
-                <div class="search-section">
-                    <input type="text" id="search-input" placeholder="Search songs...">
-
-                    <div id="search-results"></div>
+                <div class="recently-played-section">
+                    <h3>Recently Played</h3>
+                    <div id="recently-played-container"></div>
                 </div>
-                                     <div class="playlist-section">
-                                        <h3>Your Playlists</h3>
-                                    <div id="playlist-container"></div>
 
-                                         <div class="liked-section">
-                                            <h3>Liked Songs</h3>
-
-                                    <button id="play-liked-btn" class="spotify-btn">
-                                        ▶ Play Liked Songs
-                                    </button>
-                                             <div id="liked-container"></div>
-                                    </div>
-</div>
             </div>
+        </section>
+
+        <!-- RIGHT -->
+        <section class="right-panel">
+
+            <!-- SEARCH -->
+            <div class="search-section">
+                <input type="text" id="search-input" placeholder="Search songs...">
+                <div id="search-results"></div>
+            </div>
+
+            <!-- PLAYLISTS -->
+            <div class="playlist-section">
+                <h3>Your Playlists</h3>
+                <div id="playlist-container"></div>
+            </div>
+
+            <!-- LIKED -->
+            <div class="liked-section">
+                <h3>Liked Songs</h3>
+
+                <button id="play-liked-btn" class="spotify-btn">
+                    ▶ Play Liked Songs
+                </button>
+
+                <div id="liked-container"></div>
+            </div>
+
         </section>
 
     </div>
