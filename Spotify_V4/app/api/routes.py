@@ -240,3 +240,16 @@ def search(query: str, request:Request):
         return results
 
 
+@router.post("/play_track")
+def play_track(request: Request, uri: str = Body(...)):
+    token = request.session.get("token_info", {}).get("access_token")
+
+
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
+
+    requests.put("https://api.spotify.com/v1/me/player/play",headers=headers,json={"uris": [uri]})
+
+    return{"status": "playing"}
