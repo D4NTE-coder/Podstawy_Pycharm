@@ -39,6 +39,10 @@
                     {% endfor %}
                 </div>
             {% endif %}
+            <div class="recommended-section">
+    <h2>Recommended</h2>
+    <div id="recommended-container"></div>
+</div>
         </section>
 
         <!-- CENTER -->
@@ -297,6 +301,7 @@ fetchPlaylists();
 fetchRecentlyPlayed();
 setInterval(fetchRecentlyPlayed, 5000);
 fetchLikedSongs();
+
 
 //-----------playlists-----------
 function fetchPlaylists() {

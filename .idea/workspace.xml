@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Liked songs backed + frontend + scripts. + New scope.">
+    <list default="true" id="95e1fdaf-9963-4e49-bbbf-4379043e93c4" name="Changes" comment="Center laylout + Polished look + html rewiev + css review">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/api/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/static/css/dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spotify_V4/app/templates/app.html" afterDir="false" />
     </list>
@@ -150,14 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728035398330</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Dodanie geopy - program sam wyszukuje współrzedne - modyfikacja kodu">
-      <option name="closed" value="true" />
-      <created>1734294921166</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1734294921166</updated>
     </task>
     <task id="LOCAL-00047" summary="dodanie requirements.txt - refactor kodu">
       <option name="closed" value="true" />
@@ -543,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777935984974</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Center laylout + Polished look + html rewiev + css review">
+      <option name="closed" value="true" />
+      <created>1777937006262</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1777937006262</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -558,7 +559,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Wersja ktora dziala lecz nie pobiera danych" />
     <MESSAGE value="dzialajacy program lekko zmodyfikowany" />
     <MESSAGE value="zmiany graficzne oraz dodawanie albumu" />
     <MESSAGE value="poprawa graficzna dodanie kilku funkcjonalnosci" />
@@ -583,7 +583,8 @@
     <MESSAGE value="live change music + fix css layout." />
     <MESSAGE value="adding playlists backend + html + css" />
     <MESSAGE value="Liked songs backed + frontend + scripts. + New scope." />
-    <option name="LAST_COMMIT_MESSAGE" value="Liked songs backed + frontend + scripts. + New scope." />
+    <MESSAGE value="Center laylout + Polished look + html rewiev + css review" />
+    <option name="LAST_COMMIT_MESSAGE" value="Center laylout + Polished look + html rewiev + css review" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
